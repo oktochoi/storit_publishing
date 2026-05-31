@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이용약관 동의</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/agree.css" />
+  </head>
+  <body>
+    <main class="agree">
+      <img class="agree-bg" src="/assets/images/agree_back.svg" alt="" />
+
+      <a class="back-button" href="./login.html" aria-label="뒤로 가기">
+        <img src="/assets/images/Back Button.svg" alt="" />
+      </a>
+
+      <div class="agree-content">
+        <header class="agree-header">
+          <h1 class="agree-title">
+            스토릿<br />
+            이용약관 동의
+          </h1>
+          <p class="agree-desc">
+            스토릿 서비스 시작 및 가입을 위해<br />
+            정보 제공에 동의해주세요!
+          </p>
+        </header>
+
+        <button class="agree-all" type="button" data-agree-all aria-pressed="false">
+          <span class="agree-all__inner">
+            <svg class="agree-all__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path
+                d="M5 10.2L8.2 13.4L15 6.6"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            전체 약관동의
+          </span>
+        </button>
+
+        <ul class="agree-list">
+          <li class="agree-item" data-required="true">
+            <button class="agree-item__check" type="button" aria-label="서비스 이용약관 동의">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M5 10.2L8.2 13.4L15 6.6"
+                  stroke="#D4D4CC"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <label class="agree-item__label">[필수] 서비스 이용약관</label>
+            <a class="agree-item__more" href="./detail1.html">더보기</a>
+          </li>
+          <li class="agree-item" data-required="true">
+            <button class="agree-item__check" type="button" aria-label="14세 이상 동의">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M5 10.2L8.2 13.4L15 6.6"
+                  stroke="#D4D4CC"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <label class="agree-item__label">[필수] 14세 이상 입니다</label>
+            <a class="agree-item__more" href="./detail2.html">더보기</a>
+          </li>
+          <li class="agree-item" data-required="false">
+            <button class="agree-item__check" type="button" aria-label="개인정보 수집 및 이용동의">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M5 10.2L8.2 13.4L15 6.6"
+                  stroke="#D4D4CC"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <label class="agree-item__label">[선택] 개인정보 수집 및 이용동의</label>
+            <a class="agree-item__more" href="./detail3.html">더보기</a>
+          </li>
+          <li class="agree-item" data-required="false">
+            <button class="agree-item__check" type="button" aria-label="이벤트 및 마케팅 수신 동의">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M5 10.2L8.2 13.4L15 6.6"
+                  stroke="#D4D4CC"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <label class="agree-item__label">[선택] 이벤트 및 마케팅 수신 동의</label>
+            <a class="agree-item__more" href="./detail4.html">더보기</a>
+          </li>
+        </ul>
+
+        <button class="agree-next" type="button" disabled>다음</button>
+      </div>
+    </main>
+
+    <script src="../../js/agree.js"></script>
+  </body>
+</html>

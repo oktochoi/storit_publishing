@@ -1,0 +1,259 @@
+:root {
+  --screen-width: 372px;
+  --screen-height: 812px;
+  --white: #ffffff;
+  --cookie: #f9c356;
+  --primary-amber: #ef9f27;
+  --primary-yellow: #ffd95e;
+  --primary-yellow-pale: #fef4d2;
+  --input-bg: #f3efe9;
+  --dark-brown: #3d2000;
+  --neutral-brown-mid: #5d3300;
+  --black: #1c1000;
+  --gray: #888880;
+  --required: #e53935;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--white);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.userinfo {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.userinfo-bg {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  object-fit: cover;
+  display: block;
+}
+
+.back-button {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  padding: 13px 17px 13px 9px;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.back-button:active {
+  opacity: 0.7;
+}
+
+.userinfo-content {
+  position: absolute;
+  inset: 76px 0 0;
+  padding: 24px 26px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo-header {
+  margin-bottom: 24px;
+}
+
+.userinfo-title {
+  color: var(--dark-brown);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.28px;
+  margin-bottom: 12px;
+}
+
+.userinfo-desc {
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.userinfo-form {
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--primary-yellow);
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.userinfo-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.userinfo-label {
+  color: var(--neutral-brown-mid);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.userinfo-required {
+  color: var(--required);
+}
+
+.userinfo-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 12px;
+  border-radius: 10px;
+  background: var(--input-bg);
+}
+
+.userinfo-input__icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.userinfo-input__control {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--black);
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  outline: none;
+}
+
+.userinfo-input__control::placeholder {
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.userinfo-input--date {
+  position: relative;
+  cursor: pointer;
+}
+
+.userinfo-input__display {
+  flex: 1;
+  min-width: 0;
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  pointer-events: none;
+}
+
+.userinfo-input__display--filled {
+  color: var(--black);
+}
+
+.userinfo-input__control--date {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.userinfo-gender {
+  display: flex;
+  gap: 10px;
+}
+
+.userinfo-gender__btn {
+  flex: 1;
+  min-height: 48px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--input-bg);
+  color: var(--gray);
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  cursor: pointer;
+}
+
+.userinfo-gender__btn--selected {
+  background: var(--primary-yellow-pale);
+  color: var(--neutral-brown-mid);
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px var(--primary-amber);
+}
+
+.userinfo-gender__btn:active {
+  opacity: 0.9;
+}
+
+.userinfo-next {
+  display: flex;
+  width: 330px;
+  height: 57px;
+  min-height: 56px;
+  padding: 2px 28px;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 50px;
+  align-self: center;
+  border-radius: 16px;
+  border: 1px solid var(--primary-amber);
+  background: var(--cookie);
+  color: var(--white);
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.18px;
+  cursor: pointer;
+}
+
+.userinfo-next:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.userinfo-next:not(:disabled):active {
+  opacity: 0.9;
+}

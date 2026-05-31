@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유저정보</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/userinfo.css" />
+  </head>
+  <body>
+    <main class="userinfo">
+      <img class="userinfo-bg" src="/assets/images/agree_back.svg" alt="" />
+
+      <a class="back-button" href="./agree.html" aria-label="뒤로 가기">
+        <img src="/assets/images/Back Button.svg" alt="" />
+      </a>
+
+      <div class="userinfo-content">
+        <header class="userinfo-header">
+          <h1 class="userinfo-title">유저정보</h1>
+          <p class="userinfo-desc">
+            스토릿 서비스 시작을 위해<br />
+            간단한 유저 정보를 입력해주세요!
+          </p>
+        </header>
+
+        <form class="userinfo-form" novalidate>
+          <div class="userinfo-field">
+            <label class="userinfo-label" for="nickname">
+              닉네임 <span class="userinfo-required" aria-hidden="true">*</span>
+            </label>
+            <div class="userinfo-input">
+              <img class="userinfo-input__icon" src="/assets/icons/user.svg" alt="" />
+              <input
+                id="nickname"
+                name="nickname"
+                type="text"
+                class="userinfo-input__control"
+                placeholder="닉네임 설정하기"
+                autocomplete="nickname"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="userinfo-field">
+            <label class="userinfo-label" for="birth-date">
+              생년월일 <span class="userinfo-required" aria-hidden="true">*</span>
+            </label>
+            <div class="userinfo-input userinfo-input--date">
+              <img class="userinfo-input__icon" src="/assets/icons/calender.svg" alt="" />
+              <span
+                class="userinfo-input__display"
+                data-placeholder="생년월일 선택하기"
+                aria-hidden="true"
+              >
+                생년월일 선택하기
+              </span>
+              <input
+                id="birth-date"
+                name="birth-date"
+                type="date"
+                class="userinfo-input__control userinfo-input__control--date"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="userinfo-field userinfo-field--gender">
+            <span class="userinfo-label">성별 (선택)</span>
+            <div class="userinfo-gender" role="group" aria-label="성별 선택">
+              <button class="userinfo-gender__btn" type="button" data-gender="female">
+                여성
+              </button>
+              <button class="userinfo-gender__btn" type="button" data-gender="male">남성</button>
+            </div>
+          </div>
+        </form>
+
+        <button class="userinfo-next" type="button" disabled>다음</button>
+      </div>
+    </main>
+
+    <script src="../../js/userinfo.js"></script>
+  </body>
+</html>

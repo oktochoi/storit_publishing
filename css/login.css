@@ -59,6 +59,7 @@ body {
   justify-self: stretch;
   border: 0;
   background: transparent;
+  text-decoration: none;
   cursor: pointer;
 }
 
