@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Jalnan 2";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/Jalnan2OTF00.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.welcome2-oven-msg {
+  position: absolute;
+  top: 472px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 224px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.welcome2-oven-msg__name,
+.welcome2-oven-msg__title {
+  text-align: center;
+  font-family: "Jalnan 2", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.3px;
+  -webkit-font-smoothing: antialiased;
+  paint-order: stroke fill;
+}
+
+.welcome2-oven-msg__name {
+  color: var(--primary-amber, #ef9f27);
+  -webkit-text-stroke: 1.5px #ef9f27;
+  text-shadow:
+    0.8px 0 0 #ef9f27,
+    -0.8px 0 0 #ef9f27,
+    0 0.8px 0 #ef9f27,
+    0 -0.8px 0 #ef9f27,
+    0.6px 0.6px 0 #ef9f27,
+    -0.6px 0.6px 0 #ef9f27,
+    0.6px -0.6px 0 #ef9f27,
+    -0.6px -0.6px 0 #ef9f27;
+  margin-bottom: 0;
+}
+
+.welcome2-oven-msg__title {
+  color: var(--neutral-brown-mid, #5d3300);
+  -webkit-text-stroke: 1.5px #5d3300;
+  text-shadow:
+    0.8px 0 0 #5d3300,
+    -0.8px 0 0 #5d3300,
+    0 0.8px 0 #5d3300,
+    0 -0.8px 0 #5d3300,
+    0.6px 0.6px 0 #5d3300,
+    -0.6px 0.6px 0 #5d3300,
+    0.6px -0.6px 0 #5d3300,
+    -0.6px -0.6px 0 #5d3300;
+}

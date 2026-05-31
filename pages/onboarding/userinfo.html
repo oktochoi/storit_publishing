@@ -82,7 +82,42 @@
           </div>
         </form>
 
-        <button class="userinfo-next" type="button" disabled>다음</button>
+        <button class="userinfo-next" id="userinfo-next" type="button" disabled>다음</button>
+      </div>
+
+      <div class="notify-modal" id="notify-modal" aria-hidden="true">
+        <div class="notify-modal__overlay" data-modal-close></div>
+        <div
+          class="notify-modal__dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="notify-modal-title"
+        >
+          <button class="notify-modal__close" type="button" data-modal-close aria-label="닫기">
+            <img src="/assets/icons/XIcon.svg" alt="" />
+          </button>
+
+          <img class="notify-modal__icon" src="/assets/images/alarm.svg" alt="" />
+
+          <h2 class="notify-modal__title" id="notify-modal-title">스토릿 소식 알림</h2>
+          <p class="notify-modal__desc">
+            쿠키를 만들어 볼 수 있는 새 퀴즈 오픈,<br />
+            리워드 지급, 랭킹 결과등을 받아볼 수 있어요
+          </p>
+
+          <div class="notify-modal__actions">
+            <button class="notify-modal__btn notify-modal__btn--primary" type="button">
+              알림받기
+            </button>
+            <button
+              class="notify-modal__btn notify-modal__btn--secondary"
+              type="button"
+              data-modal-close
+            >
+              나중에하기
+            </button>
+          </div>
+        </div>
       </div>
     </main>
 

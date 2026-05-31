@@ -12,6 +12,8 @@
   --black: #1c1000;
   --gray: #888880;
   --required: #e53935;
+  --green: #43bb65;
+  --green-pale: #d7ffc2;
 }
 
 * {
@@ -255,5 +257,122 @@ body {
 }
 
 .userinfo-next:not(:disabled):active {
+  opacity: 0.9;
+}
+
+.notify-modal {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.notify-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.notify-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 16, 0, 0.55);
+}
+
+.notify-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 300px;
+  padding: 28px 20px 20px;
+  border-radius: 20px;
+  background: var(--white);
+  text-align: center;
+}
+
+.notify-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notify-modal__close img {
+  width: 12px;
+  height: 12px;
+}
+
+.notify-modal__close:active {
+  opacity: 0.7;
+}
+
+.notify-modal__icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.notify-modal__title {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.18px;
+  margin-bottom: 12px;
+}
+
+.notify-modal__desc {
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  margin-bottom: 24px;
+}
+
+.notify-modal__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.notify-modal__btn {
+  flex: 1;
+  min-height: 48px;
+  border: 0;
+  border-radius: 12px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  cursor: pointer;
+}
+
+.notify-modal__btn--primary {
+  background: var(--green);
+  color: var(--white);
+}
+
+.notify-modal__btn--secondary {
+  background: var(--green-pale);
+  color: var(--green);
+}
+
+.notify-modal__btn:active {
   opacity: 0.9;
 }

@@ -21,16 +21,20 @@ function syncBirthDateDisplay() {
   display.classList.add("userinfo-input__display--filled");
 }
 
-function updateNextButton() {
+function isFormValid() {
   const nickname = document.getElementById("nickname");
   const birthDate = document.getElementById("birth-date");
-  const nextBtn = document.querySelector(".userinfo-next");
 
-  if (!nextBtn || !nickname || !birthDate) return;
+  if (!nickname || !birthDate) return false;
 
-  const nicknameValid = nickname.value.trim().length > 0;
-  const birthDateValid = birthDate.value.length > 0;
-  nextBtn.disabled = !(nicknameValid && birthDateValid);
+  return nickname.value.trim().length > 0 && birthDate.value.length > 0;
+}
+
+function updateNextButton() {
+  const nextBtn = document.getElementById("userinfo-next");
+  if (!nextBtn) return;
+
+  nextBtn.disabled = !isFormValid();
 }
 
 function initBirthDateField() {
@@ -48,14 +52,16 @@ function initBirthDateField() {
   birthDate.max = maxDate;
   birthDate.min = minDate;
 
-  birthDate.addEventListener("change", () => {
+  const onBirthDateUpdate = () => {
     syncBirthDateDisplay();
     updateNextButton();
-  });
+  };
 
-  birthDate.addEventListener("input", updateNextButton);
+  birthDate.addEventListener("change", onBirthDateUpdate);
+  birthDate.addEventListener("input", onBirthDateUpdate);
 
-  dateField?.addEventListener("click", () => {
+  dateField?.addEventListener("click", (event) => {
+    event.preventDefault();
     if (typeof birthDate.showPicker === "function") {
       birthDate.showPicker();
     } else {
@@ -88,6 +94,52 @@ function initGenderButtons() {
   });
 }
 
+function openNotifyModal() {
+  const modal = document.getElementById("notify-modal");
+  if (!modal) return;
+
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+}
+
+function goToWelcome() {
+  const nickname = document.getElementById("nickname")?.value.trim();
+
+  if (nickname) {
+    sessionStorage.setItem("storit-nickname", nickname);
+  } else {
+    sessionStorage.removeItem("storit-nickname");
+  }
+
+  window.location.href = "./welcome2.html";
+}
+
+function handleNextStep() {
+  if (!isFormValid()) return;
+  openNotifyModal();
+}
+
+function initNotifyModal() {
+  const modal = document.getElementById("notify-modal");
+  const nextBtn = document.getElementById("userinfo-next");
+  const form = document.querySelector(".userinfo-form");
+
+  if (!modal) return;
+
+  nextBtn?.addEventListener("click", handleNextStep);
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    handleNextStep();
+  });
+
+  modal.querySelectorAll("[data-modal-close]").forEach((el) => {
+    el.addEventListener("click", goToWelcome);
+  });
+
+  modal.querySelector(".notify-modal__btn--primary")?.addEventListener("click", goToWelcome);
+}
+
 function initUserinfoPage() {
   const nickname = document.getElementById("nickname");
 
@@ -95,6 +147,7 @@ function initUserinfoPage() {
 
   initBirthDateField();
   initGenderButtons();
+  initNotifyModal();
   updateNextButton();
 }
 

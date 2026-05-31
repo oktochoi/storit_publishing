@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스토릿 홈</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/main.css" />
+  </head>
+  <body>
+    <div class="main-app">
+      <header class="main-header">
+        <div class="main-header__profile">
+          <img class="main-header__avatar" src="/assets/icons/profile.svg" alt="" />
+          <div class="main-header__user">
+            <p class="main-header__name">
+              <span id="main-nickname">감자도리</span> LV.8
+            </p>
+            <div class="main-header__progress" aria-hidden="true">
+              <span class="main-header__progress-fill" style="width: 42%"></span>
+            </div>
+            <span class="main-header__progress-text">42%</span>
+          </div>
+        </div>
+
+        <div class="main-header__center">
+          <div class="main-header__hearts" aria-label="하트 2개">
+            <span class="main-header__heart main-header__heart--filled" aria-hidden="true"></span>
+            <span class="main-header__heart" aria-hidden="true"></span>
+            <button class="main-header__heart-add" type="button" aria-label="하트 추가">+</button>
+          </div>
+          <p class="main-header__timer">28:45 남음</p>
+        </div>
+
+        <div class="main-header__actions">
+          <div class="main-header__cookie">
+            <img src="/assets/icons/cookie.svg" alt="" />
+            <span>602</span>
+          </div>
+          <button class="main-header__mail" type="button" aria-label="알림">
+            <img src="/assets/images/main_alarm.svg" alt="" />
+          </button>
+        </div>
+      </header>
+
+      <div class="main-scroll">
+        <section class="main-banner" aria-label="프로모션">
+          <div class="main-banner__inner">
+            <img
+              class="main-banner__image"
+              src="/assets/images/main_banner.svg"
+              alt="매일 퀴즈 풀고 쿠키 받아가세요"
+            />
+            <a class="main-banner__btn" href="#">오늘의 미션 보기 &gt;</a>
+            <span class="main-banner__badge">1/3</span>
+          </div>
+        </section>
+
+        <nav class="main-quick" aria-label="바로가기">
+          <a class="main-quick__item" href="#" aria-label="오늘의 미션">
+            <img src="/assets/images/mission.svg" alt="" />
+          </a>
+          <a class="main-quick__item" href="#" aria-label="출석체크">
+            <img src="/assets/images/check.svg" alt="" />
+          </a>
+          <a class="main-quick__item" href="#" aria-label="친구 초대">
+            <img src="/assets/images/invite.svg" alt="" />
+          </a>
+          <a class="main-quick__item" href="#" aria-label="내 퀴즈">
+            <img src="/assets/images/myquiz.svg" alt="" />
+          </a>
+        </nav>
+
+        <section class="main-quiz-banner" aria-label="오늘의 퀴즈 안내">
+          <img
+            class="main-quiz-banner__image"
+            src="/assets/images/freequiz.svg"
+            alt="오늘의 퀴즈 무료 기회 2/2, 웹툰 퀴즈 풀면 최대 5,000원"
+          />
+        </section>
+
+        <nav class="main-tabs" aria-label="요일 필터">
+          <button class="main-tabs__item" type="button">전체</button>
+          <button class="main-tabs__item main-tabs__item--active" type="button">월</button>
+          <button class="main-tabs__item" type="button">화</button>
+          <button class="main-tabs__item" type="button">수</button>
+          <button class="main-tabs__item" type="button">목</button>
+          <button class="main-tabs__item" type="button">금</button>
+          <button class="main-tabs__item" type="button">토</button>
+          <button class="main-tabs__item" type="button">일</button>
+        </nav>
+
+        <ul class="main-list">
+          <li class="main-card">
+            <img
+              class="main-card__thumb"
+              src="/assets/images/onboarding1.svg"
+              alt="66666년 만에 환생한 흑마법사"
+            />
+            <div class="main-card__body">
+              <h2 class="main-card__title">66666년 만에 환생한 흑마법사</h2>
+              <div class="main-card__tags">
+                <span class="main-card__tag">중세판타지 액션</span>
+                <span class="main-card__tag">먼치킨</span>
+              </div>
+            </div>
+            <a class="main-card__btn main-card__btn--quiz" href="#">
+              <span>퀴즈</span>
+              <span>보기</span>
+            </a>
+          </li>
+
+          <li class="main-card">
+            <img class="main-card__thumb" src="/assets/images/onboarding2.svg" alt="첫정" />
+            <div class="main-card__body">
+              <h2 class="main-card__title">첫정</h2>
+              <div class="main-card__tags">
+                <span class="main-card__tag">로맨스</span>
+                <span class="main-card__tag">설렘폭발</span>
+              </div>
+            </div>
+            <a class="main-card__btn main-card__btn--quiz" href="#">
+              <span>퀴즈</span>
+              <span>보기</span>
+            </a>
+          </li>
+
+          <li class="main-card">
+            <img class="main-card__thumb" src="/assets/images/onboarding3.svg" alt="A.I. 닥터" />
+            <div class="main-card__body">
+              <h2 class="main-card__title">A.I. 닥터</h2>
+              <div class="main-card__tags">
+                <span class="main-card__tag">드라마</span>
+                <span class="main-card__tag">의학</span>
+              </div>
+            </div>
+            <a class="main-card__btn main-card__btn--result" href="#">
+              <span>퀴즈</span>
+              <span>결과</span>
+            </a>
+          </li>
+
+          <li class="main-card">
+            <img
+              class="main-card__thumb"
+              src="/assets/images/onboarding1.svg"
+              alt="나 혼자만 레벨업"
+            />
+            <div class="main-card__body">
+              <h2 class="main-card__title">나 혼자만 레벨업</h2>
+              <div class="main-card__tags">
+                <span class="main-card__tag">판타지</span>
+                <span class="main-card__tag">액션</span>
+              </div>
+            </div>
+            <a class="main-card__btn main-card__btn--quiz" href="#">
+              <span>퀴즈</span>
+              <span>보기</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="main-nav" aria-label="하단 메뉴">
+        <a class="main-nav__item main-nav__item--active" href="./index.html" aria-label="홈">
+          <img src="/assets/icons/home.svg" alt="" />
+        </a>
+        <a class="main-nav__item" href="#" aria-label="랭킹">
+          <img src="/assets/icons/ranking.svg" alt="" />
+        </a>
+        <a class="main-nav__item" href="#" aria-label="상점">
+          <img src="/assets/icons/shop.svg" alt="" />
+        </a>
+        <a class="main-nav__item" href="#" aria-label="마이페이지">
+          <img src="/assets/icons/mypage.svg" alt="" />
+        </a>
+      </nav>
+    </div>
+
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

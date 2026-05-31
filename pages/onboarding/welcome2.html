@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>환영합니다</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/welcome.css" />
+    <link rel="stylesheet" href="../../css/welcome2.css" />
+  </head>
+  <body>
+    <main class="welcome welcome2">
+      <img
+        class="welcome-image"
+        src="/assets/images/welcome2.svg"
+        alt="스토릿 오븐이 예열되었습니다"
+      />
+
+      <div class="welcome2-oven-msg" aria-live="polite">
+        <p class="welcome2-oven-msg__name">
+          <span id="welcome-nickname">ㅇㅇ</span>님!
+        </p>
+        <p class="welcome2-oven-msg__title">환영합니다!</p>
+      </div>
+
+      <div class="welcome-cta">
+        <a class="welcome-btn" href="/pages/main/index.html">쿠키 구우러 가기!</a>
+      </div>
+    </main>
+
+    <script src="../../js/welcome2.js"></script>
+  </body>
+</html>
