@@ -1,0 +1,85 @@
+:root {
+  --screen-width: 372px;
+  --screen-height: 812px;
+
+  --neutral-brown-mid: #5d3300;
+  --primary-yellow-pale: #fef4d2;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--white);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 공통 프레임 규격 */
+.onboarding {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+}
+
+/* 공통 화면 이미지 규격 */
+.onboarding-image {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  object-fit: cover;
+  display: block;
+}
+
+.cta-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 70px;
+}
+
+/* 공통 버튼 outer 레이아웃 */
+.cta-button {
+  display: flex;
+  width: var(--screen-width);
+  padding: 0 20px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  color: var(--neutral-brown-mid);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 공통 버튼 inner 스타일 */
+.cta-button span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+  min-width: 96px;
+  min-height: 56px;
+  padding: 2px 28px;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: var(--primary-yellow-pale);
+  color: var(--neutral-brown-mid);
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+}

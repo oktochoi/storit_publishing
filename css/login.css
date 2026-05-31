@@ -1,0 +1,87 @@
+:root {
+  --screen-width: 372px;
+  --screen-height: 812px;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--white);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.onboarding {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.onboarding-image {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  object-fit: cover;
+  display: block;
+}
+
+.login-buttons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 300px;
+  display: grid;
+  width: 254px;
+  height: 173px;
+  row-gap: 5px;
+  column-gap: 10px;
+  grid-template-rows: 54.24px 54.24px 54.24px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.login-btn {
+  display: flex;
+  width: 254px;
+  height: 50px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / span 1;
+  justify-self: stretch;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.login-btn--kakao {
+  grid-row: 1 / span 1;
+}
+
+.login-btn--naver {
+  grid-row: 2 / span 1;
+}
+
+.login-btn--google {
+  grid-row: 3 / span 1;
+}
+
+.login-btn img {
+  width: 100%;
+  height: 50px;
+  display: block;
+  pointer-events: none;
+  border-radius: 15px;
+}
+
+.login-btn:active {
+  opacity: 0.85;
+}
