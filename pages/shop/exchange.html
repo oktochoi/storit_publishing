@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>교환 신청</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/shop-common.css" />
+    <link rel="stylesheet" href="../../css/shop-pages.css" />
+  </head>
+  <body>
+    <main class="shop-app">
+      <header class="shop-header">
+        <a class="shop-header__back" href="/pages/shop/product.html" aria-label="뒤로 가기">
+          <img src="/assets/images/Back Button.svg" alt="" />
+        </a>
+        <h1 class="shop-header__title">교환 신청</h1>
+      </header>
+
+      <div class="shop-body">
+        <div class="shop-scroll">
+          <div class="shop-exchange-product">
+            <img class="shop-exchange-product__thumb" src="/assets/images/shop/product-thumb.svg" alt="" />
+            <div class="shop-exchange-product__info">
+              <strong>네이버페이 포인트 5000P</strong>
+              <div class="shop-exchange-product__use">
+                <span class="shop-price shop-price--lg"><img src="/assets/images/shop/cookie-price.svg" alt="" />50</span>
+                <span>쿠키 사용</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="shop-cookie-balance">
+            <div class="shop-cookie-balance__inner">
+              <div class="shop-cookie-balance__col">
+                <p>내 보유 쿠키</p>
+                <strong><img src="/assets/images/shop/cookie-price.svg" alt="" />80 <small>개</small></strong>
+              </div>
+              <img class="shop-cookie-balance__divider" src="/assets/images/shop/divider-v.svg" alt="" />
+              <div class="shop-cookie-balance__col">
+                <p>교환 후 잔여 쿠키</p>
+                <strong><img src="/assets/images/shop/cookie-price.svg" alt="" />30 <small>개</small></strong>
+              </div>
+            </div>
+          </div>
+
+          <section class="shop-exchange-guide">
+            <h2>교환 안내</h2>
+            <div class="shop-guide-steps">
+              <div class="shop-guide-step">
+                <img src="/assets/images/shop/guide-time.svg" alt="" width="25" height="25" />
+                <div>
+                  <strong>교환 신청 후 평균 1~3일 내 지급돼요.</strong>
+                  <p>평균 소요 기간이며, 상황에 따라 변동될 수 있어요.</p>
+                </div>
+              </div>
+              <div class="shop-guide-step">
+                <img src="/assets/images/shop/notify-icon.svg" alt="" width="25" height="25" />
+                <div>
+                  <strong>지급 완료시 앱 알림을 보내드려요.</strong>
+                  <p>보상함에서 상품을 확인할 수 있어요.</p>
+                </div>
+              </div>
+              <div class="shop-guide-step">
+                <img src="/assets/images/shop/guide-notify.svg" alt="" width="23" height="23" />
+                <div>
+                  <strong>마이페이지 &gt; 보상함</strong>
+                  <p>교환 상황은 보상함에서 확인 가능해요.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="shop-exchange-notice" style="position:relative">
+            <div class="shop-exchange-notice__head">
+              <img src="/assets/images/shop/icon-shield.svg" alt="" />
+              <h3>꼭 확인해주세요!</h3>
+            </div>
+            <ul class="shop-info-list">
+              <li>
+                <img src="/assets/images/shop/bullet-check.svg" alt="" />
+                교환 신청 후 취소 및 환불이 불가능해요.
+              </li>
+              <li>
+                <img src="/assets/images/shop/bullet-check.svg" alt="" />
+                부정 사용시 서비스 이용이 제한될 수 있습니다.
+              </li>
+              <li>
+                <img src="/assets/images/shop/bullet-check.svg" alt="" />
+                유효기간이 만료되면 사용이 불가능합니다.
+              </li>
+            </ul>
+            <img class="shop-exchange-notice__illus" src="/assets/images/shop/guide-shield.svg" alt="" />
+            <label class="shop-exchange-check">
+              <input type="checkbox" id="exchange-agree" />
+              위 내용을 모두 확인했어요
+            </label>
+          </section>
+        </div>
+
+        <footer class="shop-product-footer">
+          <a class="shop-btn shop-btn--brown" href="/pages/shop/complete.html" id="confirm-btn">신청 확정하기</a>
+        </footer>
+
+        <div class="shop-wave-bar" aria-hidden="true">
+          <img class="shop-wave-bar__bg" src="/assets/images/bottom_background.svg" alt="" />
+        </div>
+      </div>
+    </main>
+    <script src="../../js/shop-exchange.js"></script>
+  </body>
+</html>

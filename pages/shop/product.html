@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품 정보</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/shop-common.css" />
+    <link rel="stylesheet" href="../../css/shop.css" />
+    <link rel="stylesheet" href="../../css/shop-pages.css" />
+  </head>
+  <body>
+    <main class="shop-app">
+      <header class="shop-header">
+        <a class="shop-header__back" href="/pages/shop/index.html" aria-label="뒤로 가기">
+          <img src="/assets/images/Back Button.svg" alt="" />
+        </a>
+        <h1 class="shop-header__title">상품 정보</h1>
+      </header>
+
+      <div class="shop-body">
+        <div class="shop-scroll">
+          <div class="shop-product-hero">
+            <img class="shop-product-hero__img" src="/assets/images/shop/product-naverpay.png" alt="" />
+            <h2 class="shop-product-hero__title">네이버페이 포인트 5,000P</h2>
+            <div class="shop-product-price">
+              <span class="shop-price shop-price--lg"><img src="/assets/images/shop/cookie-price.svg" alt="" />50</span>
+            </div>
+          </div>
+
+          <section class="shop-info-card">
+            <div class="shop-info-card__meta">
+              <div class="shop-info-meta">
+                <img src="/assets/images/shop/icon-store.svg" alt="" />
+                <strong>사용처</strong>
+                <span>네이버페이 가맹점</span>
+              </div>
+              <div class="shop-info-meta">
+                <img src="/assets/images/shop/icon-time.svg" alt="" />
+                <strong>지급시간</strong>
+                <span>평균 지급 (1~3분)</span>
+              </div>
+              <div class="shop-info-meta">
+                <img src="/assets/images/shop/icon-calendar.svg" alt="" />
+                <strong>유효기간</strong>
+                <span>지급일로부터 30일</span>
+              </div>
+            </div>
+            <img class="shop-info-card__divider" src="/assets/images/shop/divider.svg" alt="" />
+            <div class="shop-info-card__head">
+              <h2>상품설명</h2>
+              <a class="shop-info-card__more" href="#">
+                더보기
+                <img src="/assets/images/shop/chevron-sm.svg" alt="" />
+              </a>
+            </div>
+            <ul class="shop-info-list">
+              <li>
+                <img src="/assets/images/shop/bullet-check.svg" alt="" />
+                네이버페이 포인트 5,000원권입니다.
+              </li>
+              <li>
+                <img src="/assets/images/shop/bullet-check.svg" alt="" />
+                네이버페이 가맹점에서 사용할 수 있습니다.
+              </li>
+              <li>
+                <img src="/assets/images/shop/bullet-check.svg" alt="" />
+                교환 완료 시 알림으로 안내드려요.
+              </li>
+            </ul>
+          </section>
+
+          <div class="shop-recommend-row">
+            <img src="/assets/images/shop/icon-recommend.svg" alt="" />
+            <h2>추천 상품</h2>
+          </div>
+          <div class="shop-recommend-scroll">
+            <a class="shop-card-sm shop-card-sm--tall" href="/pages/shop/product.html">
+              <img class="shop-card-sm__img" src="/assets/images/shop/gift-google-play.svg" alt="" />
+              <p class="shop-card-sm__name">구글 플레이 기프트 카드</p>
+              <p class="shop-card-sm__price">5000원</p>
+              <span class="shop-price"><img src="/assets/images/shop/cookie-chip.svg" alt="" />50</span>
+            </a>
+            <a class="shop-card-sm shop-card-sm--tall" href="/pages/shop/product.html">
+              <img class="shop-card-sm__img" src="/assets/images/shop/gift-google-play.svg" alt="" />
+              <p class="shop-card-sm__name">구글 플레이 기프트 카드</p>
+              <p class="shop-card-sm__price">5000원</p>
+              <span class="shop-price"><img src="/assets/images/shop/cookie-chip.svg" alt="" />50</span>
+            </a>
+            <a class="shop-card-sm shop-card-sm--tall" href="/pages/shop/product.html">
+              <img class="shop-card-sm__img" src="/assets/images/shop/gift-google-play.svg" alt="" />
+              <p class="shop-card-sm__name">구글 플레이 기프트 카드</p>
+              <p class="shop-card-sm__price">5000원</p>
+              <span class="shop-price"><img src="/assets/images/shop/cookie-chip.svg" alt="" />50</span>
+            </a>
+          </div>
+        </div>
+
+        <footer class="shop-product-footer">
+          <a class="shop-btn shop-btn--primary" href="/pages/shop/exchange.html" id="exchange-btn">교환 신청하기</a>
+        </footer>
+
+        <div class="shop-wave-bar" aria-hidden="true">
+          <img class="shop-wave-bar__bg" src="/assets/images/bottom_background.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="shop-modal" id="modal-cookie-lack" hidden>
+        <div class="shop-modal__card" role="dialog" aria-labelledby="modal-cookie-title">
+          <button class="shop-modal__close" type="button" data-modal-close aria-label="닫기">
+            <img src="/assets/images/shop/modal-close.svg" alt="" />
+          </button>
+          <h2 class="shop-modal__title" id="modal-cookie-title">보유 쿠키 부족</h2>
+          <p class="shop-modal__text">
+            현재 보유한 쿠키 수량이 부족해요.<br />
+            즐겁게 웹툰 퀴즈 풀고, 더 많은 쿠키를 모아보세요!
+          </p>
+          <img class="shop-modal__illus" src="/assets/images/shop/modal-cookie-lack.svg" alt="" />
+          <button class="shop-modal__btn" type="button" data-modal-close>확인</button>
+        </div>
+      </div>
+
+      <div class="shop-modal" id="modal-fail" hidden>
+        <div class="shop-modal__card" role="dialog" aria-labelledby="modal-fail-title">
+          <button class="shop-modal__close" type="button" data-modal-close aria-label="닫기">
+            <img src="/assets/images/shop/modal-close.svg" alt="" />
+          </button>
+          <h2 class="shop-modal__title" id="modal-fail-title">쿠폰 발급 실패</h2>
+          <p class="shop-modal__text">
+            쿠폰 발급에 실패했어요.<br />
+            사용한 쿠키는 자동 복구되었어요.<br />
+            나중에 다시 시도해주세요.
+          </p>
+          <img class="shop-modal__illus" src="/assets/images/shop/modal-fail.svg" alt="" />
+          <button class="shop-modal__btn" type="button" data-modal-close>확인</button>
+        </div>
+      </div>
+    </main>
+    <script src="../../js/shop-product.js"></script>
+  </body>
+</html>

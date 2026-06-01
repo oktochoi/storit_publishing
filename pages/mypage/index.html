@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/mypage-common.css" />
+    <link rel="stylesheet" href="../../css/mypage.css" />
+  </head>
+  <body>
+    <main class="mypage-app">
+      <a class="mypage-header--settings" href="/pages/mypage/settings.html" aria-label="환경설정">
+        <img src="/assets/images/mypage/icon-settings.svg" alt="" />
+      </a>
+
+      <header class="mypage-header">
+        <a class="mypage-header__back" href="/pages/main/index.html" aria-label="뒤로 가기">
+          <img src="/assets/images/Back Button.svg" alt="" />
+        </a>
+        <h1 class="mypage-header__title">마이페이지</h1>
+      </header>
+
+      <div class="mypage-body">
+        <div class="mypage-scroll">
+        <section class="mypage-profile">
+          <div class="mypage-profile__avatar-wrap">
+            <div class="mypage-profile__avatar">
+              <img src="/assets/images/mypage/avatar.svg" alt="" />
+            </div>
+            <img class="mypage-profile__edit" src="/assets/images/mypage/icon-edit.svg" alt="" />
+          </div>
+          <div class="mypage-profile__info">
+            <div class="mypage-profile__name-wrap">
+              <p class="mypage-profile__name">감자도리</p>
+              <img class="mypage-profile__name-edit" src="/assets/images/mypage/icon-edit.svg" alt="" />
+            </div>
+            <div class="mypage-profile__level">
+              <span>LV. 8</span>
+              <div class="mypage-profile__bar">
+                <div class="mypage-profile__bar-fill"></div>
+                <span class="mypage-profile__bar-text">67%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mypage-mission">
+          <div class="mypage-mission__top">
+            <div class="mypage-mission__head">
+              <h2>오늘의 쿠키 제작 진행상태</h2>
+              <a class="mypage-mission__link" href="/pages/mission/index.html">미션 보러가기</a>
+            </div>
+            <hr class="mypage-mission__divider" aria-hidden="true" />
+            <div class="mypage-mission__ingredients">
+              <div class="mypage-ingredient">
+                <div class="mypage-ingredient__circle mypage-ingredient__circle--done">
+                  <img class="ingredient-icon" src="/assets/images/missions/butter.svg" alt="" />
+                </div>
+                <span>버터</span>
+              </div>
+              <div class="mypage-ingredient">
+                <div class="mypage-ingredient__circle mypage-ingredient__circle--done">
+                  <img class="ingredient-icon" src="/assets/images/missions/flour.svg" alt="" />
+                </div>
+                <span>밀가루</span>
+              </div>
+              <div class="mypage-ingredient">
+                <div class="mypage-ingredient__circle mypage-ingredient__circle--done">
+                  <img class="ingredient-icon" src="/assets/images/missions/milk.svg" alt="" />
+                </div>
+                <span>우유</span>
+              </div>
+              <div class="mypage-ingredient">
+                <div class="mypage-ingredient__circle">
+                  <img class="ingredient-icon" src="/assets/images/missions/sugar.svg" alt="" />
+                </div>
+                <span>설탕</span>
+              </div>
+              <div class="mypage-ingredient">
+                <div class="mypage-ingredient__circle">
+                  <img class="ingredient-icon" src="/assets/images/missions/chocolate.svg" alt="" />
+                </div>
+                <span>초콜릿</span>
+              </div>
+            </div>
+          </div>
+          <div class="mypage-mission__stats">
+            <div class="mypage-mission__cookie">
+              <span class="mypage-mission__cookie-label">내 쿠키</span>
+              <span class="mypage-mission__cookie-value">
+                <img src="/assets/images/mypage/cookie-small.svg" alt="" />
+                <strong>80개</strong>
+              </span>
+            </div>
+            <div class="mypage-mission__rank">
+              <span>내 순위</span>
+              <strong>33위</strong>
+            </div>
+            <div class="mypage-mission__score">
+              <span>내 점수</span>
+              <strong>822점</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="mypage-tags">
+          <h2>나를 설명하는 태그</h2>
+          <div class="mypage-tags__list">
+            <span class="mypage-tag">#기자매</span>
+            <span class="mypage-tag">#판타지 덕후</span>
+            <span class="mypage-tag"># 행운의 여신</span>
+            <button class="mypage-tag mypage-tag--add" type="button" aria-label="태그 추가">
+              <img src="/assets/images/mypage/icon-tag-add.svg" alt="" />
+            </button>
+          </div>
+        </section>
+
+        <section class="mypage-prefs">
+          <div class="mypage-pref mypage-pref--webtoon">
+            <h3>인생 웹툰</h3>
+            <p>기자매</p>
+            <button class="mypage-pref__btn" type="button" data-edit="webtoon">수정하기</button>
+          </div>
+          <div class="mypage-pref mypage-pref--genre">
+            <h3>좋아하는 장르</h3>
+            <p>공포, 스릴러</p>
+            <button class="mypage-pref__btn" type="button" data-edit="genre">수정하기</button>
+          </div>
+        </section>
+
+        <section class="mypage-shortcuts">
+          <a class="mypage-shortcut" href="/pages/shop/storage.html">
+            <div class="mypage-shortcut__head">
+              <img src="/assets/images/mypage/icon-present.svg" alt="" />
+              <span>내 보상함</span>
+            </div>
+            <p class="mypage-shortcut__body">사용 가능한&#10;상품권 2개</p>
+            <span class="mypage-shortcut__cta">
+              보상함 가기
+              <img src="/assets/images/mypage/chevron-sm.svg" alt="" />
+            </span>
+          </a>
+          <a class="mypage-shortcut" href="#">
+            <div class="mypage-shortcut__head">
+              <img src="/assets/images/mypage/icon-quiz.svg" alt="" />
+              <span>내 퀴즈</span>
+            </div>
+            <p class="mypage-shortcut__body">퀴즈 심사 결과&#10;확인 1건</p>
+            <span class="mypage-shortcut__cta">
+              내 퀴즈 가기
+              <img src="/assets/images/mypage/chevron-sm.svg" alt="" />
+            </span>
+          </a>
+        </section>
+        </div>
+
+        <div class="mypage-wave-bar" aria-hidden="true">
+          <img class="mypage-wave-bar__bg" src="/assets/images/bottom_background.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="mypage-modal" id="modal-edit" hidden>
+        <div class="mypage-modal__card" role="dialog" aria-labelledby="modal-edit-title">
+          <button class="mypage-modal__close" type="button" data-modal-close aria-label="닫기">
+            <img src="/assets/images/mypage/modal-close.svg" alt="" width="12" height="12" />
+          </button>
+          <div class="mypage-modal__icon">
+            <img src="/assets/images/mypage/modal-pencil.svg" alt="" width="50" height="50" />
+          </div>
+          <h2 class="mypage-modal__title" id="modal-edit-title">이대로 수정하시겠습니까?</h2>
+          <label class="visually-hidden" for="modal-edit-value">수정 내용</label>
+          <input class="mypage-modal__input" type="text" id="modal-edit-value" value="기자매" />
+          <div class="mypage-modal__actions">
+            <button class="mypage-btn mypage-btn--cancel" type="button" data-modal-close>취소</button>
+            <button class="mypage-btn mypage-btn--confirm" type="button" id="modal-edit-confirm">수정하기</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../../js/mypage.js"></script>
+  </body>
+</html>

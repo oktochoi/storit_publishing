@@ -1,0 +1,89 @@
+:root {
+  --screen-width: 372px;
+  --screen-height: 812px;
+  --bake-header-offset: 76px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.mission-bake {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  position: relative;
+  overflow: hidden;
+  background-color: #ffd95e;
+  background-image: url("/assets/images/agree_back.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.mission-bake-header {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  left: 0;
+  right: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-bake__back {
+  position: absolute;
+  left: 8px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-bake__back img {
+  width: 24px;
+  height: 24px;
+}
+
+.mission-bake-title {
+  color: #1c1000;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+}
+
+.mission-bake__scene {
+  position: absolute;
+  z-index: 1;
+  top: 78px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.mission-bake__art {
+  width: 100%;
+  height: calc(100% + var(--bake-header-offset));
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+  transform: translateY(calc(-1 * var(--bake-header-offset)));
+}

@@ -653,6 +653,10 @@ body {
   opacity: 0.55;
 }
 
+.main-nav__item--mypage img {
+  width: 36px;
+}
+
 .main-nav__item--active img {
   opacity: 1;
 }

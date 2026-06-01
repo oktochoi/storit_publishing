@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>교환 완료</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/shop-common.css" />
+    <link rel="stylesheet" href="../../css/shop-pages.css" />
+  </head>
+  <body>
+    <main class="shop-app">
+      <header class="shop-header">
+        <a class="shop-header__back" href="/pages/shop/index.html" aria-label="뒤로 가기">
+          <img src="/assets/images/Back Button.svg" alt="" />
+        </a>
+        <h1 class="shop-header__title">교환 완료</h1>
+      </header>
+
+      <div class="shop-body">
+        <div class="shop-scroll">
+          <section class="shop-complete-hero">
+            <img class="shop-complete-hero__image" src="/assets/images/shop/happy_cookie.svg" alt="" />
+            <h2>교환 신청이 완료되었어요!</h2>
+            <p>신청한 상품은 아래 내용으로 지급될 예정이에요.</p>
+          </section>
+
+          <div class="shop-detail-table">
+            <div class="shop-detail-row">
+              <span>상품명</span>
+              <span>네이퍼페이 포인트 5,000원</span>
+            </div>
+            <div class="shop-detail-row">
+              <span>사용쿠키</span>
+              <span>50 개</span>
+            </div>
+            <div class="shop-detail-row">
+              <span>교환일시</span>
+              <span>2026.05.21 14:30</span>
+            </div>
+            <div class="shop-detail-row">
+              <span>유효기간</span>
+              <span>교환일로부터 30일</span>
+            </div>
+          </div>
+
+          <div class="shop-complete-cookie">
+            <div class="shop-complete-cookie__inner">
+              <div class="shop-cookie-balance__col">
+                <p>현재 보유 쿠키</p>
+                <strong><img src="/assets/images/shop/cookie-price.svg" alt="" />30 <small>개</small></strong>
+              </div>
+              <img class="shop-cookie-balance__divider" src="/assets/images/shop/divider-v.svg" alt="" />
+              <a class="shop-complete-cookie__link" href="#">
+                쿠키 내역 보러가기
+                <img src="/assets/images/shop/chevron-sm.svg" alt="" width="10" height="10" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-complete-actions">
+          <a class="shop-btn shop-btn--primary" href="/pages/shop/storage.html">보관함에서 확인하기</a>
+          <a class="shop-btn shop-btn--ghost" href="/pages/shop/index.html">상점으로 돌아가기</a>
+        </div>
+
+        <div class="shop-wave-bar" aria-hidden="true">
+          <img class="shop-wave-bar__bg" src="/assets/images/bottom_background.svg" alt="" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

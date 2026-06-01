@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이용문의</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/mypage-common.css" />
+    <link rel="stylesheet" href="../../css/mypage.css" />
+  </head>
+  <body>
+    <main class="mypage-app">
+      <header class="mypage-header">
+        <a class="mypage-header__back" href="/pages/mypage/settings.html" aria-label="뒤로 가기">
+          <img src="/assets/images/Back Button.svg" alt="" />
+        </a>
+        <h1 class="mypage-header__title">이용문의</h1>
+      </header>
+
+      <div class="mypage-body">
+        <div class="mypage-scroll">
+        <label class="mypage-form-label" for="inquiry-email">답변 받으실 이메일</label>
+        <input
+          class="mypage-form-input"
+          id="inquiry-email"
+          type="email"
+          value="email@example.com"
+          autocomplete="email"
+        />
+
+        <label class="mypage-form-label" for="inquiry-body">문의 내용</label>
+        <div class="mypage-form-textarea-wrap">
+          <textarea
+            class="mypage-form-textarea"
+            id="inquiry-body"
+            placeholder="내용을 입력하세요"
+          ></textarea>
+        </div>
+        </div>
+
+        <footer class="mypage-footer">
+          <a class="mypage-btn mypage-btn--primary" href="/pages/mypage/inquiry-complete.html">문의하기</a>
+        </footer>
+
+        <div class="mypage-wave-bar" aria-hidden="true">
+          <img class="mypage-wave-bar__bg" src="/assets/images/bottom_background.svg" alt="" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

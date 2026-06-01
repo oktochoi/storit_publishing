@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>출석체크</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/attendance.css" />
+  </head>
+  <body>
+    <main class="attendance">
+      <header class="attendance-header">
+        <a class="attendance-header__back" href="/pages/main/index.html" aria-label="뒤로 가기">
+          <img src="/assets/images/Back Button.svg" alt="" />
+        </a>
+        <h1 class="attendance-header__title">출석체크</h1>
+      </header>
+
+      <div class="attendance-body">
+        <div class="attendance-timer">
+          <span class="attendance-timer__label">오늘의 출석체크 종료까지</span>
+          <span class="attendance-timer__time">03:41:29 남음</span>
+        </div>
+
+        <section class="attendance-card" aria-label="출석 달력">
+          <div class="attendance-card__summary">
+            <div class="attendance-card__copy">
+              <p class="attendance-card__month">2025년 9월</p>
+              <p class="attendance-card__streak">
+                <strong>00일째</strong><span> 연속 출석체크 중</span>
+              </p>
+            </div>
+            <img
+              class="attendance-card__hero"
+              src="/assets/images/attendance/hero-cookie.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="attendance-calendar">
+            <div class="attendance-calendar__nav">
+              <img
+                class="attendance-calendar__nav-arrows"
+                src="/assets/images/attendance/month-nav.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="attendance-calendar__nav-label">2025년 5월</span>
+            </div>
+
+            <div class="attendance-weekdays" aria-hidden="true">
+              <span>일</span>
+              <span>월</span>
+              <span>화</span>
+              <span>수</span>
+              <span>목</span>
+              <span>금</span>
+              <span>토</span>
+            </div>
+
+            <div class="attendance-grid" aria-label="2025년 5월 출석 현황"></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="attendance-actions">
+        <button class="attendance-check-btn" type="button">출석하기</button>
+
+        <a class="attendance-mission" href="/pages/mission/index.html">
+          <img class="attendance-mission__icon" src="/assets/images/attendance/flour.svg" alt="" />
+          <div class="attendance-mission__text">
+            <strong>오늘의 미션 출석체크 달성!!</strong>
+            <span>쿠키의 재료 &lt;밀가루 획득&gt;</span>
+          </div>
+          <img
+            class="attendance-mission__arrow"
+            src="/assets/images/attendance/banner-arrow.svg"
+            alt=""
+          />
+        </a>
+      </div>
+
+    </main>
+    <script src="../../js/attendance.js"></script>
+  </body>
+</html>

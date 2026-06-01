@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>환경설정</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/mypage-common.css" />
+    <link rel="stylesheet" href="../../css/mypage.css" />
+  </head>
+  <body>
+    <main class="mypage-app">
+      <header class="mypage-header">
+        <a class="mypage-header__back" href="/pages/mypage/index.html" aria-label="뒤로 가기">
+          <img src="/assets/images/Back Button.svg" alt="" />
+        </a>
+        <h1 class="mypage-header__title">환경설정</h1>
+      </header>
+
+      <div class="mypage-body">
+        <div class="mypage-scroll">
+        <section class="mypage-settings-section">
+          <h2>알림설정</h2>
+          <div class="mypage-settings-list">
+            <div class="mypage-settings-row">
+              <span>퀴즈 알림</span>
+              <button class="mypage-toggle mypage-toggle--on" type="button" aria-pressed="true" data-toggle>
+                <img class="mypage-toggle__knob" src="/assets/images/mypage/toggle-knob.svg" alt="" width="20" height="20" />
+              </button>
+            </div>
+            <div class="mypage-settings-row">
+              <span>랭킹 알림</span>
+              <button class="mypage-toggle mypage-toggle--on" type="button" aria-pressed="true" data-toggle>
+                <img class="mypage-toggle__knob" src="/assets/images/mypage/toggle-knob.svg" alt="" width="20" height="20" />
+              </button>
+            </div>
+            <div class="mypage-settings-row">
+              <span>이벤트 알림</span>
+              <button class="mypage-toggle mypage-toggle--on" type="button" aria-pressed="true" data-toggle>
+                <img class="mypage-toggle__knob" src="/assets/images/mypage/toggle-knob.svg" alt="" width="20" height="20" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <hr class="mypage-settings-divider" aria-hidden="true" />
+
+        <section class="mypage-settings-section">
+          <h2>계정설정</h2>
+          <div class="mypage-settings-list">
+            <button class="mypage-settings-row mypage-settings-row--link" type="button" id="logout-open">
+              <span>로그아웃</span>
+              <img class="mypage-settings-chevron" src="/assets/images/mypage/chevron-nav.svg" alt="" width="15" height="15" />
+            </button>
+            <a class="mypage-settings-row mypage-settings-row--link" href="/pages/mypage/withdraw.html">
+              <span>회원 탈퇴</span>
+              <img class="mypage-settings-chevron" src="/assets/images/mypage/chevron-nav.svg" alt="" width="15" height="15" />
+            </a>
+          </div>
+        </section>
+
+        <section class="mypage-settings-section mypage-settings-section--etc">
+          <hr class="mypage-settings-divider" aria-hidden="true" />
+          <h2>기타</h2>
+          <div class="mypage-settings-list">
+            <a class="mypage-settings-row mypage-settings-row--link" href="/pages/mypage/inquiry.html">
+              <span>문의하기</span>
+              <img class="mypage-settings-chevron" src="/assets/images/mypage/chevron-nav.svg" alt="" width="15" height="15" />
+            </a>
+            <a class="mypage-settings-row mypage-settings-row--link" href="/pages/mypage/terms.html">
+              <span>이용약관</span>
+              <img class="mypage-settings-chevron" src="/assets/images/mypage/chevron-nav.svg" alt="" width="15" height="15" />
+            </a>
+            <a class="mypage-settings-row mypage-settings-row--link" href="/pages/mypage/privacy.html">
+              <span>개인정보 처리방침</span>
+              <img class="mypage-settings-chevron" src="/assets/images/mypage/chevron-nav.svg" alt="" width="15" height="15" />
+            </a>
+          </div>
+        </section>
+        </div>
+
+        <div class="mypage-wave-bar" aria-hidden="true">
+          <img class="mypage-wave-bar__bg" src="/assets/images/bottom_background.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="mypage-modal" id="modal-logout" hidden>
+        <div
+          class="mypage-modal__card"
+          role="dialog"
+          aria-labelledby="modal-logout-title"
+          aria-describedby="modal-logout-desc"
+        >
+          <button class="mypage-modal__close" type="button" data-modal-close aria-label="닫기">
+            <img src="/assets/images/mypage/modal-close.svg" alt="" width="12" height="12" />
+          </button>
+          <div class="mypage-modal__icon">
+            <img src="/assets/images/mypage/modal-logout-icon.svg" alt="" width="50" height="50" />
+          </div>
+          <h2 class="mypage-modal__title" id="modal-logout-title">정말 로그아웃 하시겠습니까?</h2>
+          <p class="mypage-logout-text" id="modal-logout-desc">
+            로그아웃해도 계정과 보유 쿠키는 그대로 유지됩니다.<br />
+            언제든 같은 계정으로 다시 로그인할 수 있어요.
+          </p>
+          <div class="mypage-modal__actions">
+            <button class="mypage-btn mypage-btn--cancel" type="button" data-modal-close>취소</button>
+            <button class="mypage-btn mypage-btn--confirm" type="button">로그아웃</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../../js/mypage-settings.js"></script>
+  </body>
+</html>
