@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘의 미션</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/mission.css" />
+  </head>
+  <body>
+    <main class="mission">
+      <header class="mission-header">
+        <a class="mission-back" href="/pages/main/index.html" aria-label="뒤로 가기">
+          <img src="/assets/images/Back Button.svg" alt="" />
+        </a>
+        <h1 class="mission-title">오늘의 미션</h1>
+      </header>
+
+      <div class="mission-scroll">
+        <section class="recipe-banner">
+          <img class="recipe-banner__image" src="/assets/images/missions/RecipeBanner.svg" alt="" />
+        </section>
+
+        <section class="mission-timer">
+          <span>오늘의 미션 종료까지</span>
+          <strong>03:41:29 남음</strong>
+        </section>
+
+        <section class="ingredient-strip" aria-label="재료 수집 진행도">
+          <div class="ingredient-chip ingredient-chip--done">
+            <img src="/assets/images/missions/butter.svg" alt="" />
+            <span>버터</span>
+          </div>
+          <div class="ingredient-chip ingredient-chip--done">
+            <img class="flour-icon flour-icon--chip" src="/assets/images/missions/flour.svg" alt="" />
+            <span>밀가루</span>
+          </div>
+          <div class="ingredient-chip ingredient-chip--done">
+            <img src="/assets/images/missions/milk.svg" alt="" />
+            <span>우유</span>
+          </div>
+          <div class="ingredient-chip ingredient-chip--done">
+            <img src="/assets/images/missions/sugar.svg" alt="" />
+            <span>설탕</span>
+          </div>
+          <div class="ingredient-chip">
+            <img src="/assets/images/missions/chocolate.svg" alt="" />
+            <span>초콜릿</span>
+          </div>
+        </section>
+
+        <ul class="mission-list">
+          <li class="mission-item">
+            <div class="mission-item__main">
+              <div class="mission-item__thumb"><img src="/assets/images/missions/butter.svg" alt="" /></div>
+              <div class="mission-item__content">
+                <h3>버터</h3>
+                <p>출석체크 하기</p>
+                <div class="mission-item__progress"><span style="width: 100%"></span></div>
+              </div>
+              <em>1 / 1</em>
+            </div>
+            <div class="mission-item__state mission-item__state--done">
+              <small>기본 재료</small>
+              <strong>완료</strong>
+            </div>
+          </li>
+
+          <li class="mission-item">
+            <div class="mission-item__main">
+              <div class="mission-item__thumb">
+                <img class="flour-icon flour-icon--thumb" src="/assets/images/missions/flour.svg" alt="" />
+              </div>
+              <div class="mission-item__content">
+                <h3>밀가루</h3>
+                <p>웹툰 2개 풀기</p>
+                <div class="mission-item__progress"><span style="width: 100%"></span></div>
+              </div>
+              <em>1 / 1</em>
+            </div>
+            <div class="mission-item__state mission-item__state--done">
+              <small>기본 재료</small>
+              <strong>완료</strong>
+            </div>
+          </li>
+
+          <li class="mission-item">
+            <div class="mission-item__main">
+              <div class="mission-item__thumb"><img src="/assets/images/missions/milk.svg" alt="" /></div>
+              <div class="mission-item__content">
+                <h3>우유</h3>
+                <p>친구 초대하기</p>
+                <div class="mission-item__progress"><span style="width: 100%"></span></div>
+              </div>
+              <em>1 / 1</em>
+            </div>
+            <div class="mission-item__state mission-item__state--done">
+              <small>기본 재료</small>
+              <strong>완료</strong>
+            </div>
+          </li>
+
+          <li class="mission-item">
+            <div class="mission-item__main">
+              <div class="mission-item__thumb"><img src="/assets/images/missions/sugar.svg" alt="" /></div>
+              <div class="mission-item__content">
+                <h3>설탕</h3>
+                <p>웹툰 5개 풀기</p>
+                <div class="mission-item__progress"><span style="width: 38%"></span></div>
+              </div>
+              <em>1 / 1</em>
+            </div>
+            <a class="mission-item__state mission-item__state--link" href="#">바로가기</a>
+          </li>
+
+          <li class="mission-item">
+            <div class="mission-item__main">
+              <div class="mission-item__thumb"><img src="/assets/images/missions/chocolate.svg" alt="" /></div>
+              <div class="mission-item__content">
+                <h3>초콜릿</h3>
+                <p>응원 한 마디 작성하기</p>
+                <div class="mission-item__progress"><span style="width: 26%"></span></div>
+              </div>
+              <em>1 / 1</em>
+            </div>
+            <a class="mission-item__state mission-item__state--link" href="#">바로가기</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

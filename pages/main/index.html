@@ -62,7 +62,7 @@
         </section>
 
         <nav class="main-quick" aria-label="바로가기">
-          <a class="main-quick__item" href="#" aria-label="오늘의 미션">
+          <a class="main-quick__item" href="/pages/mission/index.html" aria-label="오늘의 미션">
             <img src="/assets/images/mission.svg" alt="" />
           </a>
           <a class="main-quick__item" href="#" aria-label="출석체크">
@@ -76,13 +76,18 @@
           </a>
         </nav>
 
-        <section class="main-quiz-banner" aria-label="오늘의 퀴즈 안내">
+        <button
+          class="main-quiz-banner main-quiz-banner--trigger"
+          id="freequiz-trigger"
+          type="button"
+          aria-label="오늘의 퀴즈 안내 열기"
+        >
           <img
             class="main-quiz-banner__image"
             src="/assets/images/freequiz.svg"
             alt="오늘의 퀴즈 무료 기회 2/2, 웹툰 퀴즈 풀면 최대 5,000원"
           />
-        </section>
+        </button>
 
         <nav class="main-tabs" aria-label="요일 필터">
           <button class="main-tabs__item" type="button">전체</button>
@@ -109,7 +114,7 @@
                 <span class="main-card__tag">먼치킨</span>
               </div>
             </div>
-            <a class="main-card__btn main-card__btn--quiz" href="#">
+            <a class="main-card__btn main-card__btn--quiz" href="/pages/mission/index.html">
               <span>퀴즈</span>
               <span>보기</span>
             </a>
@@ -124,7 +129,7 @@
                 <span class="main-card__tag">설렘폭발</span>
               </div>
             </div>
-            <a class="main-card__btn main-card__btn--quiz" href="#">
+            <a class="main-card__btn main-card__btn--quiz" href="/pages/mission/index.html">
               <span>퀴즈</span>
               <span>보기</span>
             </a>
@@ -139,7 +144,7 @@
                 <span class="main-card__tag">의학</span>
               </div>
             </div>
-            <a class="main-card__btn main-card__btn--result" href="#">
+            <a class="main-card__btn main-card__btn--result" href="/pages/mission/index.html">
               <span>퀴즈</span>
               <span>결과</span>
             </a>
@@ -158,7 +163,7 @@
                 <span class="main-card__tag">액션</span>
               </div>
             </div>
-            <a class="main-card__btn main-card__btn--quiz" href="#">
+            <a class="main-card__btn main-card__btn--quiz" href="/pages/mission/index.html">
               <span>퀴즈</span>
               <span>보기</span>
             </a>
@@ -180,6 +185,40 @@
           <img src="/assets/icons/mypage.svg" alt="" />
         </a>
       </nav>
+
+      <div class="cookie-modal" id="cookie-modal" aria-hidden="true">
+        <div class="cookie-modal__overlay" data-modal-close></div>
+        <div
+          class="cookie-modal__dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="cookie-modal-title"
+        >
+          <button class="cookie-modal__close" type="button" data-modal-close aria-label="닫기">
+            <img src="/assets/icons/XIcon.svg" alt="" />
+          </button>
+
+          <img class="cookie-modal__icon" src="/assets/icons/angel_cookie.svg" alt="" />
+
+          <h2 class="cookie-modal__title" id="cookie-modal-title">쿠키 충전</h2>
+          <p class="cookie-modal__desc">광고 보시고 추가 쿠키를 얻으시겠습니까?</p>
+
+          <div class="cookie-modal__meta" aria-label="오늘 남은 광고 충전 횟수">
+            <span class="cookie-modal__play" aria-hidden="true"></span>
+            <span class="cookie-modal__meta-text">오늘 남은 광고 충전 횟수 7 / 10</span>
+          </div>
+
+          <div class="cookie-modal__actions">
+            <button class="cookie-modal__btn cookie-modal__btn--secondary" type="button" data-modal-close>
+              취소
+            </button>
+            <button class="cookie-modal__btn cookie-modal__btn--primary" type="button">
+              <img class="cookie-modal__btn-icon" src="/assets/icons/tv.svg" alt="" />
+              광고 보기
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="../../js/main.js"></script>
