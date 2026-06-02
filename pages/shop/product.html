@@ -111,33 +111,46 @@
       </div>
 
       <div class="shop-modal" id="modal-cookie-lack" hidden>
-        <div class="shop-modal__card" role="dialog" aria-labelledby="modal-cookie-title">
+        <div
+          class="shop-modal__card shop-modal__card--svg"
+          role="dialog"
+          aria-labelledby="modal-cookie-title"
+        >
+          <h2 class="shop-modal__sr-only" id="modal-cookie-title">보유 쿠키 부족</h2>
           <button class="shop-modal__close" type="button" data-modal-close aria-label="닫기">
             <img src="/assets/images/shop/modal-close.svg" alt="" />
           </button>
-          <h2 class="shop-modal__title" id="modal-cookie-title">보유 쿠키 부족</h2>
-          <p class="shop-modal__text">
-            현재 보유한 쿠키 수량이 부족해요.<br />
-            즐겁게 웹툰 퀴즈 풀고, 더 많은 쿠키를 모아보세요!
-          </p>
-          <img class="shop-modal__illus" src="/assets/images/shop/modal-cookie-lack.svg" alt="" />
-          <button class="shop-modal__btn" type="button" data-modal-close>확인</button>
+          <img
+            class="shop-modal__svg-art"
+            src="/assets/images/no_cookie.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <button class="shop-modal__btn shop-modal__btn--overlay" type="button" data-modal-close>
+            확인
+          </button>
         </div>
       </div>
 
       <div class="shop-modal" id="modal-fail" hidden>
-        <div class="shop-modal__card" role="dialog" aria-labelledby="modal-fail-title">
+        <div
+          class="shop-modal__card shop-modal__card--svg"
+          role="dialog"
+          aria-labelledby="modal-fail-title"
+        >
+          <h2 class="shop-modal__sr-only" id="modal-fail-title">쿠폰 발급 실패</h2>
           <button class="shop-modal__close" type="button" data-modal-close aria-label="닫기">
             <img src="/assets/images/shop/modal-close.svg" alt="" />
           </button>
-          <h2 class="shop-modal__title" id="modal-fail-title">쿠폰 발급 실패</h2>
-          <p class="shop-modal__text">
-            쿠폰 발급에 실패했어요.<br />
-            사용한 쿠키는 자동 복구되었어요.<br />
-            나중에 다시 시도해주세요.
-          </p>
-          <img class="shop-modal__illus" src="/assets/images/shop/modal-fail.svg" alt="" />
-          <button class="shop-modal__btn" type="button" data-modal-close>확인</button>
+          <img
+            class="shop-modal__svg-art"
+            src="/assets/images/cookie_fail.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <button class="shop-modal__btn shop-modal__btn--overlay" type="button" data-modal-close>
+            확인
+          </button>
         </div>
       </div>
     </main>

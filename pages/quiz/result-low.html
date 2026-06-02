@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>퀴즈 결과</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/quiz-common.css" />
+    <link rel="stylesheet" href="../../css/quiz.css" />
+  </head>
+  <body>
+    <main class="quiz-app quiz-app--result">
+      <div class="quiz-app__screen">
+        <header class="quiz-header">
+          <a class="quiz-header__back" href="/pages/main/index.html" aria-label="뒤로 가기">
+            <img src="/assets/images/Back Button.svg" alt="" />
+          </a>
+          <h1 class="quiz-header__title">연애리뷰</h1>
+        </header>
+
+        <div class="quiz-body">
+          <div class="quiz-result-body">
+            <section class="quiz-result-hero quiz-result-hero--low" aria-label="점수">
+              <img class="quiz-result-hero__confetti" src="/assets/images/quiz/confetti.svg" alt="" />
+              <div class="quiz-result-hero__layout">
+                <div class="quiz-result-hero__speech">
+                  <img class="quiz-result-hero__balloon" src="/assets/images/ranking/ballon.svg" alt="" />
+                  <p class="quiz-result-hero__bubble">
+                    아쉬워요!<br />
+                    <em>다른 웹툰</em>도<br />
+                    풀어볼까요!
+                  </p>
+                </div>
+                <div class="quiz-result-hero__center">
+                  <img class="quiz-result-hero__low-rank" src="/assets/images/ranking/low_rank.svg" alt="" />
+                  <div class="quiz-result-hero__score">
+                    <span class="quiz-result-hero__score-value">45<span>점</span></span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="quiz-result-stats" aria-label="결과 요약">
+              <div class="quiz-result-stat">
+                <img class="quiz-result-stat__icon" src="/assets/images/quiz/stat-correct.svg" alt="" />
+                <div class="quiz-result-stat__copy">
+                  <span>맞춘문제</span>
+                  <strong>3개</strong>
+                </div>
+              </div>
+              <div class="quiz-result-stat">
+                <img class="quiz-result-stat__icon quiz-result-stat__icon--time" src="/assets/images/quiz/stat-time.svg" alt="" />
+                <div class="quiz-result-stat__copy">
+                  <span>걸린시간</span>
+                  <strong>22.10초</strong>
+                </div>
+              </div>
+              <div class="quiz-result-stat">
+                <img class="quiz-result-stat__icon quiz-result-stat__icon--pts" src="/assets/images/quiz/stat-points.svg" alt="" />
+                <div class="quiz-result-stat__copy">
+                  <span>획득 점수</span>
+                  <strong>45점</strong>
+                </div>
+              </div>
+            </section>
+
+            <div class="quiz-result-blocks">
+              <section class="quiz-mission-card">
+                <p class="quiz-mission-card__label">오늘의 미션을 완료하고</p>
+                <p class="quiz-mission-card__title">더 많은 쿠키를 받아가세요!</p>
+                <a class="quiz-mission-card__btn" href="/pages/mission/index.html">
+                  미션 확인하기
+                  <img src="/assets/images/quiz/chevron-next.svg" alt="" />
+                </a>
+                <div class="quiz-mission-card__deco" aria-hidden="true">
+                  <img class="quiz-mission-card__ingredient quiz-mission-card__ingredient--flour" src="/assets/images/missions/flour.svg" alt="" />
+                  <img class="quiz-mission-card__ingredient quiz-mission-card__ingredient--milk" src="/assets/images/missions/milk.svg" alt="" />
+                  <img class="quiz-mission-card__ingredient quiz-mission-card__ingredient--butter" src="/assets/images/missions/butter.svg" alt="" />
+                  <img class="quiz-mission-card__ingredient quiz-mission-card__ingredient--sugar" src="/assets/images/missions/sugar.svg" alt="" />
+                  <img class="quiz-mission-card__ingredient quiz-mission-card__ingredient--chocolate" src="/assets/images/missions/chocolate.svg" alt="" />
+                </div>
+              </section>
+
+              <section class="quiz-cheer-card quiz-cheer-card--tall">
+                <h2 class="quiz-cheer-card__title">오늘의 응원 한마디</h2>
+                <p class="quiz-cheer-card__desc">시험을 본 다른 학생들에게 응원의 말을 남겨주세요!</p>
+                <img class="quiz-cheer-card__illus" src="/assets/images/quiz/cheer-illus.svg" alt="" />
+                <div class="quiz-cheer-input">
+                  <input type="text" placeholder="여기에 응원의 한마디를 입력해주세요..." />
+                  <button class="quiz-cheer-input__send" type="button" aria-label="전송">
+                    <img src="/assets/images/quiz/cheer-send.svg" alt="" />
+                  </button>
+                </div>
+                <p class="quiz-cheer-sample">오늘도 시험 보느라 수고했습니다!<small>_무케대마왕</small></p>
+              </section>
+
+              <section class="quiz-eval-card">
+                <p class="quiz-eval-card__label">무케대황의 퀴즈를 평가해주세요</p>
+                <p class="quiz-eval-card__question">Q. 공기주가 미팅에서 마음에 드는 사람으로 지목한 사람은?</p>
+                <div class="quiz-eval-card__chips" role="group" aria-label="퀴즈 평가">
+                  <button class="quiz-eval-chip" type="button" data-rating="like">
+                    <span class="quiz-eval-chip__row">
+                      <img src="/assets/images/quiz/eval-like.svg" alt="" />
+                      좋아요
+                    </span>
+                  </button>
+                  <button class="quiz-eval-chip" type="button" data-rating="neutral">
+                    <span class="quiz-eval-chip__row">
+                      <img src="/assets/images/quiz/eval-neutral.svg" alt="" />
+                      보통
+                    </span>
+                  </button>
+                  <button class="quiz-eval-chip" type="button" data-rating="dislike">
+                    <span class="quiz-eval-chip__row">
+                      <img src="/assets/images/quiz/eval-dislike.svg" alt="" />
+                      싫어요
+                    </span>
+                  </button>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="quiz-result-foot">
+            <footer class="quiz-result-footer">
+              <a class="quiz-result-btn quiz-result-btn--ghost" href="/pages/ranking/guide.html">랭킹 보러가기</a>
+              <a class="quiz-result-btn quiz-result-btn--primary" href="/pages/quiz/play.html">다른 문제 풀러가기</a>
+            </footer>
+            <div class="quiz-wave-bar" aria-hidden="true">
+              <img class="quiz-wave-bar__bg" src="/assets/images/bottom_background.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../../js/quiz.js"></script>
+  </body>
+</html>

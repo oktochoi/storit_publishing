@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/invite-common.css" />
   </head>
   <body>
     <div class="main-app">
@@ -68,10 +69,10 @@
           <a class="main-quick__item" href="/pages/attendance/index.html" aria-label="출석체크">
             <img src="/assets/images/check.svg" alt="" />
           </a>
-          <a class="main-quick__item" href="#" aria-label="친구 초대">
+          <button class="main-quick__item" type="button" data-invite-open aria-label="친구 초대">
             <img src="/assets/images/invite.svg" alt="" />
-          </a>
-          <a class="main-quick__item" href="#" aria-label="내 퀴즈">
+          </button>
+          <a class="main-quick__item" href="/pages/myquiz/index.html" aria-label="내 퀴즈">
             <img src="/assets/images/myquiz.svg" alt="" />
           </a>
         </nav>
@@ -114,7 +115,7 @@
                 <span class="main-card__tag">먼치킨</span>
               </div>
             </div>
-            <a class="main-card__btn main-card__btn--quiz" href="/pages/mission/index.html">
+            <a class="main-card__btn main-card__btn--quiz" href="/pages/quiz/play.html">
               <span>퀴즈</span>
               <span>보기</span>
             </a>
@@ -129,7 +130,7 @@
                 <span class="main-card__tag">설렘폭발</span>
               </div>
             </div>
-            <a class="main-card__btn main-card__btn--quiz" href="/pages/mission/index.html">
+            <a class="main-card__btn main-card__btn--quiz" href="/pages/quiz/play.html">
               <span>퀴즈</span>
               <span>보기</span>
             </a>
@@ -144,7 +145,7 @@
                 <span class="main-card__tag">의학</span>
               </div>
             </div>
-            <a class="main-card__btn main-card__btn--result" href="/pages/mission/index.html">
+            <a class="main-card__btn main-card__btn--result" href="/pages/quiz/result.html">
               <span>퀴즈</span>
               <span>결과</span>
             </a>
@@ -163,7 +164,7 @@
                 <span class="main-card__tag">액션</span>
               </div>
             </div>
-            <a class="main-card__btn main-card__btn--quiz" href="/pages/mission/index.html">
+            <a class="main-card__btn main-card__btn--quiz" href="/pages/quiz/play.html">
               <span>퀴즈</span>
               <span>보기</span>
             </a>
@@ -175,7 +176,7 @@
         <a class="main-nav__item main-nav__item--active" href="./index.html" aria-label="홈">
           <img src="/assets/icons/home.svg" alt="" />
         </a>
-        <a class="main-nav__item" href="#" aria-label="랭킹">
+        <a class="main-nav__item" href="/pages/ranking/guide.html" aria-label="랭킹">
           <img src="/assets/icons/ranking.svg" alt="" />
         </a>
         <a class="main-nav__item" href="/pages/shop/index.html" aria-label="상점">
@@ -185,6 +186,90 @@
           <img src="/assets/icons/mypage.svg" alt="" width="36" height="35" />
         </a>
       </nav>
+
+      <div class="invite-overlay" id="invite-modal" aria-hidden="true">
+        <div class="invite-overlay__dim" aria-hidden="true"></div>
+
+        <div class="invite-panel">
+          <img
+            class="invite-overlay__hero"
+            src="/assets/images/invite/invite-hero.svg"
+            alt=""
+            width="110"
+            height="115"
+          />
+
+          <section class="invite-sheet" aria-label="친구 초대">
+            <button class="invite-sheet__close" type="button" id="invite-close" aria-label="닫기">
+              <img src="/assets/icons/XIcon.svg" alt="" />
+            </button>
+
+            <h2 class="invite-sheet__title">친구에게 링크를 보내주세요</h2>
+          <p class="invite-sheet__desc">
+            초대한 친구가 신규 가입자일 경우에만 혜택을 받을 수 있어요!
+          </p>
+
+          <div class="invite-code">
+            <span class="invite-code__text" id="invite-code">B4630509</span>
+            <button class="invite-code__paste" type="button" id="invite-copy" aria-label="초대 코드 복사">
+              <img src="/assets/images/invite/invite-paste.svg" alt="" />
+            </button>
+          </div>
+
+          <button class="invite-btn invite-btn--kakao" type="button">카카오톡으로 초대하기</button>
+
+          <button class="invite-reward-link" type="button" id="invite-reward-open">
+            친구 초대 별도 보상 보기
+          </button>
+          </section>
+        </div>
+
+        <div class="invite-reward-overlay" id="invite-reward-modal" aria-hidden="true">
+          <div class="invite-reward-overlay__backdrop" data-invite-reward-close></div>
+          <div
+            class="invite-reward"
+            role="dialog"
+            aria-labelledby="invite-reward-title"
+            aria-modal="true"
+          >
+            <button class="invite-reward__close" type="button" data-invite-reward-close aria-label="닫기">
+              <img src="/assets/icons/XIcon.svg" alt="" />
+            </button>
+            <div class="invite-reward__head">
+              <h3 class="invite-reward__title" id="invite-reward-title">친구 초대 별도 보상</h3>
+              <img
+                class="invite-reward__cookie"
+                src="/assets/images/invite/invite-cookie-title.svg"
+                alt=""
+                width="25"
+                height="24"
+              />
+            </div>
+            <table class="invite-reward-table">
+              <thead>
+                <tr>
+                  <th scope="col">조건</th>
+                  <th scope="col">보상</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>친구 가입 완료</td>
+                  <td>쿠키 2개</td>
+                </tr>
+                <tr>
+                  <td>친구 퀴즈 3회 참여</td>
+                  <td>쿠키 3개</td>
+                </tr>
+                <tr>
+                  <td>친구가 3일 출석</td>
+                  <td>쿠키 5개</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 
       <div class="cookie-modal" id="cookie-modal" aria-hidden="true">
         <div class="cookie-modal__overlay" data-modal-close></div>
@@ -221,6 +306,7 @@
       </div>
     </div>
 
+    <script src="../../js/invite.js"></script>
     <script src="../../js/main.js"></script>
   </body>
 </html>

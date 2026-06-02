@@ -291,9 +291,14 @@ body {
 
 .main-quick__item {
   display: block;
+  padding: 0;
+  border: none;
+  background: transparent;
   text-decoration: none;
   border-radius: 12px;
   overflow: hidden;
+  cursor: pointer;
+  font: inherit;
 }
 
 .main-quick__item img {

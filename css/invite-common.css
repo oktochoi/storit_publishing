@@ -1,0 +1,372 @@
+:root {
+  --screen-width: 372px;
+  --screen-height: 812px;
+  --yellow: #ffd95e;
+  --cream: #fefaf4;
+  --white: #ffffff;
+  --brown-mid: #5d3300;
+  --dark-brown: #3d2000;
+  --black: #1c1000;
+  --amber: #ef9f27;
+  --yellow-pale: #fef4d2;
+  --cookie: #f9c356;
+  --gray: #888880;
+  --gray-light: #edebe7;
+  --table-border: #b9b9b9;
+  --overlay: rgba(28, 16, 0, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main invite bottom sheet modal */
+.invite-overlay,
+.invite-overlay button,
+.invite-overlay .invite-btn {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.invite-overlay {
+  --invite-sheet-h: 308px;
+  --invite-hero-h: 115px;
+  --invite-hero-drop: 10px;
+
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  overflow: visible;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.invite-overlay.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.invite-overlay__dim {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+}
+
+.invite-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  overflow: visible;
+}
+
+.invite-overlay__hero {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + var(--invite-hero-drop)));
+  width: 110px;
+  height: var(--invite-hero-h);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.invite-sheet {
+  position: relative;
+  z-index: 1;
+  min-height: var(--invite-sheet-h);
+  padding: calc(var(--invite-hero-h) / 2 + 24px - var(--invite-hero-drop)) 20px 32px;
+  background: var(--white);
+  border-radius: 24px 24px 0 0;
+}
+
+.invite-sheet__close {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.invite-sheet__close img {
+  display: block;
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.invite-sheet__title {
+  max-width: 303px;
+  margin: 0 auto 8px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: var(--black);
+}
+
+.invite-sheet__desc {
+  max-width: 303px;
+  margin: 0 auto 20px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  color: var(--gray);
+}
+
+.invite-code {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 320px;
+  min-height: 48px;
+  margin: 0 auto 21px;
+  padding: 0 44px 0 16px;
+  background: var(--gray-light);
+  border: 1px solid var(--gray);
+  border-radius: 16px;
+}
+
+.invite-code__text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  color: var(--gray);
+}
+
+.invite-code__paste {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.invite-code__paste img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.invite-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+  min-height: 56px;
+  margin: 0 auto;
+  padding: 2px 28px;
+  border-radius: 16px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+  cursor: pointer;
+}
+
+.invite-btn--kakao {
+  border: 1px solid var(--amber);
+  background: var(--yellow);
+  color: var(--brown-mid);
+}
+
+.invite-reward-link {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--amber);
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Reward table modal — Figma 1:4325 */
+.invite-reward-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.invite-reward-overlay.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.invite-reward-overlay__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.invite-reward {
+  position: relative;
+  width: 100%;
+  max-width: 292px;
+  padding: 24px 18px 28px;
+  background: var(--yellow-pale);
+  border-radius: 24px;
+}
+
+.invite-reward__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.invite-reward__close img {
+  display: block;
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.invite-reward__head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 15px;
+  padding-right: 24px;
+}
+
+.invite-reward__title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  color: var(--black);
+}
+
+.invite-reward__cookie {
+  flex-shrink: 0;
+  width: 25px;
+  height: 24px;
+}
+
+.invite-reward-table {
+  width: 240px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid var(--table-border);
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.invite-reward-table th,
+.invite-reward-table td {
+  width: 50%;
+  padding: 10px 12px;
+  border: 1px solid var(--table-border);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.invite-reward-table th {
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--dark-brown);
+  background: var(--cookie);
+}
+
+.invite-reward-table td {
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.12px;
+  color: var(--dark-brown);
+  background: var(--white);
+}
+
+.invite-reward-table tr:first-child th {
+  border-top: none;
+}
+
+.invite-reward-table th:first-child,
+.invite-reward-table td:first-child {
+  border-left: none;
+}
+
+.invite-reward-table th:last-child,
+.invite-reward-table td:last-child {
+  border-right: none;
+}
+
+.invite-reward-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Standalone preview page */
+body.invite-standalone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.invite-standalone-frame {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  position: relative;
+  overflow: hidden;
+}
+
+.invite-standalone-frame .invite-overlay {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.invite-standalone-frame .invite-reward-overlay {
+  position: fixed;
+  z-index: 100;
+}

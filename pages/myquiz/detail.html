@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>퀴즈 상세</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/myquiz-common.css" />
+    <link rel="stylesheet" href="../../css/myquiz.css" />
+  </head>
+  <body data-status="approved">
+    <main class="myquiz-app">
+      <header class="myquiz-header">
+        <a class="myquiz-header__back" href="/pages/myquiz/index.html" aria-label="뒤로 가기">
+          <img src="/assets/images/Back Button.svg" alt="" />
+        </a>
+        <h1 class="myquiz-header__title">내 웹툰 퀴즈</h1>
+      </header>
+
+      <div class="myquiz-body">
+        <div class="myquiz-scroll myquiz-detail-scroll">
+          <article class="myquiz-detail-card">
+            <div class="myquiz-detail-head">
+              <div class="myquiz-detail-thumb-wrap">
+                <img class="myquiz-detail-thumb" src="/assets/images/myquiz/thumb-detail.png" alt="" />
+              </div>
+              <div class="myquiz-detail-info">
+                <h2>AI. 닥터 8화</h2>
+                <time datetime="2026-05-24">등록일 2026.05.24</time>
+                <span class="myquiz-status-pill myquiz-status-pill--approved" data-status-label>승인완료</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="myquiz-detail-card">
+            <h3 class="myquiz-block-title">퀴즈 질문</h3>
+            <div class="myquiz-field">예: 무케가 왕이 되겠다고 결심하게 된 이유는?</div>
+
+            <h3 class="myquiz-block-title" style="margin-top: 10px">퀴즈 정답 &amp; 오답</h3>
+            <div class="myquiz-answers">
+              <div class="myquiz-answer-row">
+                <span class="myquiz-answer-icon">
+                  <img src="/assets/images/myquiz/icon-answer-o.svg" alt="정답" />
+                </span>
+                <span class="myquiz-answer-text">정답 작성하기</span>
+              </div>
+              <div class="myquiz-answer-row">
+                <span class="myquiz-answer-icon myquiz-answer-icon--wrong">
+                  <img src="/assets/images/myquiz/icon-answer-x.svg" alt="오답" />
+                </span>
+                <span class="myquiz-answer-text">오답 작성하기</span>
+              </div>
+              <div class="myquiz-answer-row">
+                <span class="myquiz-answer-icon myquiz-answer-icon--wrong">
+                  <img src="/assets/images/myquiz/icon-answer-x.svg" alt="오답" />
+                </span>
+                <span class="myquiz-answer-text">오답 작성하기</span>
+              </div>
+              <div class="myquiz-answer-row">
+                <span class="myquiz-answer-icon myquiz-answer-icon--wrong">
+                  <img src="/assets/images/myquiz/icon-answer-x.svg" alt="오답" />
+                </span>
+                <span class="myquiz-answer-text">오답 작성하기</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="myquiz-detail-card myquiz-eval myquiz-only-approved">
+            <h3 class="myquiz-eval__title">내 퀴즈 평가</h3>
+            <div class="myquiz-eval__row">
+              <div class="myquiz-eval-chip">
+                <img src="/assets/images/myquiz/icon-like.svg" alt="" />
+                좋아요
+              </div>
+              <div class="myquiz-eval-chip">
+                <img src="/assets/images/myquiz/icon-neutral.svg" alt="" />
+                보통
+              </div>
+              <div class="myquiz-eval-chip">
+                <img src="/assets/images/myquiz/icon-dislike.svg" alt="" />
+                싫어요
+              </div>
+            </div>
+            <div class="myquiz-eval-counts">
+              <span>7 개</span>
+              <span>15 개</span>
+              <span>23 개</span>
+            </div>
+          </article>
+
+          <article class="myquiz-reject-box myquiz-only-rejected">
+            <div class="myquiz-reject-box__head">
+              <img src="/assets/images/myquiz/icon-reject.svg" alt="" />
+              <strong>반려 사유</strong>
+            </div>
+            <p>정답이 맞지 않음</p>
+          </article>
+
+          <article class="myquiz-detail-card myquiz-only-approved-stats">
+            <h3 class="myquiz-section__title">유저 참여 현황</h3>
+            <div class="myquiz-detail-stats">
+              <article class="myquiz-stat">
+                <img src="/assets/images/myquiz/icon-play.svg" alt="" />
+                <span class="myquiz-stat__label myquiz-stat__label--brown">총 플레이 수</span>
+                <strong class="myquiz-stat__value">1,248 회</strong>
+                <span class="myquiz-stat__delta">
+                  <span class="myquiz-stat__sub">어제 대비</span>
+                  <img src="/assets/images/myquiz/icon-trend-up.svg" alt="" />
+                  <span class="myquiz-stat__sub">18</span>
+                </span>
+              </article>
+              <article class="myquiz-stat">
+                <img src="/assets/images/myquiz/icon-target-detail.svg" alt="" />
+                <span class="myquiz-stat__label">평균 정답률</span>
+                <strong class="myquiz-stat__value">38%</strong>
+                <span class="myquiz-stat__sub">상위 23%</span>
+              </article>
+              <article class="myquiz-stat">
+                <img src="/assets/images/myquiz/icon-clock-detail.svg" alt="" />
+                <span class="myquiz-stat__label">평균 풀이 시간</span>
+                <strong class="myquiz-stat__value">6.2 초</strong>
+                <span class="myquiz-stat__sub">상위 41%</span>
+              </article>
+            </div>
+          </article>
+        </div>
+
+        <footer class="myquiz-footer">
+          <a class="myquiz-btn myquiz-btn--back" href="/pages/myquiz/index.html">돌아가기</a>
+          <a class="myquiz-btn myquiz-btn--resubmit" href="/pages/myquiz/create.html">재등록하기</a>
+        </footer>
+
+        <div class="myquiz-wave-bar" aria-hidden="true">
+          <img class="myquiz-wave-bar__bg" src="/assets/images/bottom_background.svg" alt="" />
+        </div>
+      </div>
+    </main>
+    <script src="../../js/myquiz.js"></script>
+  </body>
+</html>

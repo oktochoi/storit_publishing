@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>퀴즈</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/quiz-common.css" />
+    <link rel="stylesheet" href="../../css/quiz.css" />
+  </head>
+  <body>
+    <main class="quiz-app quiz-app--play">
+      <div class="quiz-app__screen">
+        <header class="quiz-header">
+          <a class="quiz-header__back" href="/pages/main/index.html" aria-label="뒤로 가기">
+            <img src="/assets/images/Back Button.svg" alt="" />
+          </a>
+          <h1 class="quiz-header__title">연애리뷰</h1>
+        </header>
+
+        <div class="quiz-body">
+          <div class="quiz-progress" aria-label="진행률">
+            <div class="quiz-progress__track">
+              <span class="quiz-progress__fill" id="quiz-progress-fill" style="width: 80%"></span>
+            </div>
+            <p class="quiz-progress__text">
+              <strong id="quiz-progress-current">4</strong>
+              <span> / 5문항</span>
+            </p>
+          </div>
+
+          <div class="quiz-stage">
+            <div class="quiz-panel">
+              <article class="quiz-card">
+                <p class="quiz-card__q">Q4.</p>
+                <h2 class="quiz-card__question">
+                  공기주가 미팅에서<br />
+                  마음에 드는 사람으로<br />
+                  지목한 사람은?
+                </h2>
+                <div class="quiz-card__meta">
+                  <div class="quiz-card__timer">
+                    <img src="/assets/images/quiz/clock.svg" alt="" />
+                    <span>10초</span>
+                  </div>
+                  <div class="quiz-card__actions">
+                    <span class="quiz-card__episode">연애리뷰 12화</span>
+                    <a class="quiz-card__link" href="#">보러가기</a>
+                  </div>
+                </div>
+              </article>
+
+              <div class="quiz-answers" id="quiz-answers">
+                <button class="quiz-answer" type="button" data-answer="1" data-correct="true">김기현</button>
+                <button class="quiz-answer" type="button" data-answer="2">이민호</button>
+                <button class="quiz-answer" type="button" data-answer="3">박서준</button>
+                <button class="quiz-answer" type="button" data-answer="4">최지우</button>
+              </div>
+            </div>
+
+            <div class="quiz-stage__foot" aria-hidden="true">
+              <div class="quiz-mascot">
+                <img id="quiz-mascot-img" src="/assets/images/quiz/mascot-selected.svg" alt="" />
+              </div>
+              <div class="quiz-wave-bar">
+                <img class="quiz-wave-bar__bg" src="/assets/images/bottom_background.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../../js/quiz.js"></script>
+  </body>
+</html>

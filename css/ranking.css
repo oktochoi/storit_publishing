@@ -1,0 +1,1012 @@
+/* Hero — 일간 랭킹 보상 안내 */
+.ranking-hero {
+  position: relative;
+  height: 165px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.ranking-hero__banner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.ranking-hero__live {
+  position: absolute;
+  z-index: 1;
+  left: 12px;
+  top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  height: 18px;
+  padding: 0 6px;
+  border-radius: 33px;
+  background: var(--orange);
+}
+
+.ranking-hero__live img {
+  width: 11px;
+  height: 11px;
+}
+
+.ranking-hero__live span {
+  font-size: 7px;
+  font-weight: 700;
+  color: var(--yellow-pale);
+  letter-spacing: -0.07px;
+}
+
+.ranking-hero__desc {
+  position: absolute;
+  left: 55px;
+  right: 12px;
+  top: 14px;
+  text-align: left;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 11px;
+  letter-spacing: -0.12px;
+  color: var(--dark-brown);
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.ranking-hero__rewards {
+  position: absolute;
+  z-index: 1;
+  left: 12px;
+  top: 35px;
+  width: 208px;
+  height: 101px;
+  padding: 6px 8px;
+  border: 5px solid #fdedcd;
+  border-radius: 10px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.ranking-hero__reward-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ranking-hero__reward-col img.icon {
+  display: block;
+  height: 21px;
+  width: auto;
+  max-width: 28px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.ranking-hero__reward-col img.icon--clover {
+  height: 22px;
+}
+
+.ranking-hero__reward-col img.icon--top30 {
+  height: 24px;
+}
+
+.ranking-hero__reward-label {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.1px;
+  color: var(--black);
+  text-align: center;
+}
+
+.ranking-hero__reward-value {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.ranking-hero__reward-value img {
+  width: 18px;
+  height: 18px;
+}
+
+.ranking-hero__reward-value strong {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  color: var(--black);
+}
+
+.ranking-hero__divider {
+  width: 1px;
+  height: 77px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.ranking-hero__timer {
+  position: absolute;
+  z-index: 1;
+  left: 12px;
+  top: 140px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.11px;
+  color: var(--dark-brown);
+}
+
+.ranking-hero__timer img {
+  width: 15px;
+  height: 15px;
+}
+
+.ranking-hero__timer strong {
+  margin-left: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  color: var(--orange);
+}
+
+/* 내 순위 카드 */
+.ranking-my-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 86px;
+  margin-bottom: 10px;
+  padding: 5px 12px;
+  border-radius: 10px;
+  background: var(--white);
+}
+
+.ranking-my-card__profile {
+  position: relative;
+  width: 128px;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ranking-my-card__label {
+  margin-left: 56px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  color: var(--dark-brown);
+}
+
+.ranking-my-card__badge {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 50px;
+  height: 50px;
+}
+
+.ranking-my-card__rank {
+  margin: 2px 0 0 56px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: var(--dark-brown);
+}
+
+.ranking-my-card__rank em {
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: -0.16px;
+}
+
+.ranking-my-card__trend {
+  position: absolute;
+  left: 104px;
+  top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 18px;
+}
+
+.ranking-my-card__trend img {
+  width: 11px;
+  height: 11px;
+}
+
+.ranking-my-card__trend span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--dark-brown);
+}
+
+.ranking-my-card__score-row {
+  margin: 4px 0 0 56px;
+  display: flex;
+  gap: 15px;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.ranking-my-card__score-row span:first-child {
+  color: var(--gray);
+}
+
+.ranking-my-card__score-row span:last-child {
+  color: var(--dark-brown);
+}
+
+.ranking-my-card__vline {
+  width: 1px;
+  height: 77px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.ranking-my-card__goal {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.ranking-my-card__goal-label {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  color: var(--dark-brown);
+}
+
+.ranking-my-card__goal-value {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.13px;
+  color: var(--dark-brown);
+  white-space: nowrap;
+}
+
+.ranking-my-card__goal-value em {
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.13px;
+}
+
+.ranking-my-card__goal-sub {
+  margin-top: 6px;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 10px;
+  letter-spacing: -0.08px;
+  color: var(--gray);
+}
+
+.ranking-my-card__quiz-btn {
+  flex-shrink: 0;
+  width: 62px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--yellow-pale);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+  color: var(--dark-brown);
+  text-decoration: none;
+}
+
+/* 순위 패널 */
+.ranking-board {
+  border-radius: 10px;
+  background: var(--white);
+  border: 0.5px solid var(--sand);
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.ranking-tabs {
+  display: flex;
+  height: 40px;
+  padding: 0;
+  gap: 0;
+  background: var(--white);
+}
+
+.ranking-tabs__item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray);
+  text-decoration: none;
+  position: relative;
+  background: var(--white);
+  border-radius: 10px 10px 0 0;
+}
+
+.ranking-tabs__item--active {
+  color: var(--black);
+  font-weight: 700;
+  background: var(--yellow);
+}
+
+.ranking-tabs__item--active::after {
+  display: none;
+}
+
+.ranking-board > .ranking-row:first-of-type {
+  margin-top: 4px;
+}
+
+.ranking-table-head {
+  display: flex;
+  align-items: center;
+  padding: 12px 19px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  color: var(--gray);
+}
+
+.ranking-table-head__rank {
+  width: 44px;
+}
+
+.ranking-table-head__name {
+  flex: 1;
+}
+
+.ranking-table-head__score {
+  width: 56px;
+  text-align: right;
+}
+
+.ranking-table-head__change {
+  width: 48px;
+  text-align: center;
+}
+
+.ranking-row {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 10px 15px;
+  border-top: 0.5px solid var(--sand);
+}
+
+.ranking-row--gold {
+  background: var(--yellow-pale);
+}
+
+.ranking-row--silver,
+.ranking-row--bronze {
+  background: var(--cream);
+}
+
+.ranking-row--me {
+  background: var(--yellow);
+  border: none;
+}
+
+.ranking-row__medal {
+  display: block;
+  width: 27px;
+  height: 25px;
+  flex-shrink: 0;
+  margin-right: 17px;
+  object-fit: contain;
+}
+
+.ranking-row__rank-num {
+  width: 27px;
+  flex-shrink: 0;
+  margin-right: 17px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  color: var(--dark-brown);
+  text-align: center;
+}
+
+.ranking-row__user {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ranking-row__name {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--black);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ranking-row__score {
+  width: 56px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--black);
+  opacity: 0.8;
+  text-align: right;
+}
+
+.ranking-row__change {
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.ranking-row__change img {
+  width: 11px;
+  height: 11px;
+}
+
+.ranking-row__change span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--dark-brown);
+}
+
+.ranking-gap {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-top: 0.5px solid var(--sand);
+  border-bottom: 0.5px solid var(--sand);
+}
+
+.ranking-gap span {
+  display: block;
+  width: 24px;
+  height: 4px;
+  background-image: radial-gradient(circle, var(--gray) 1.5px, transparent 1.5px);
+  background-size: 8px 4px;
+  background-repeat: repeat-x;
+  background-position: center;
+  opacity: 0.45;
+}
+
+/* 하단 행운 구간 */
+.ranking-lucky {
+  height: 80px;
+  padding: 11px 22px;
+  border-radius: 10px;
+  background: var(--purple-pale);
+}
+
+.ranking-lucky__inner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+}
+
+.ranking-lucky__illus {
+  width: 38px;
+  height: 59px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.ranking-lucky__copy {
+  width: 87px;
+  flex-shrink: 0;
+}
+
+.ranking-lucky__copy strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  color: var(--dark-brown);
+}
+
+.ranking-lucky__range {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--purple-deep);
+}
+
+.ranking-lucky__range span {
+  color: var(--black);
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.ranking-lucky__hint {
+  margin-top: 4px;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 10px;
+  letter-spacing: -0.08px;
+  color: var(--gray);
+}
+
+.ranking-lucky__bar-wrap {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  height: 49px;
+}
+
+.ranking-lucky__pin {
+  position: absolute;
+  left: 51px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.ranking-lucky__track {
+  position: absolute;
+  left: 0;
+  top: 26px;
+  width: 100%;
+  max-width: 137px;
+  height: 10px;
+  border-radius: 100px;
+  background: var(--gray-light);
+}
+
+.ranking-lucky__fill {
+  position: absolute;
+  left: 32px;
+  top: 26px;
+  width: 66px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--purple-mid);
+}
+
+.ranking-lucky__marker {
+  position: absolute;
+  top: 26px;
+  width: 5px;
+  height: 10px;
+  border-radius: 100px;
+  background: var(--purple-deep);
+}
+
+.ranking-lucky__marker--start {
+  left: 32px;
+}
+
+.ranking-lucky__marker--end {
+  left: 93px;
+}
+
+.ranking-lucky__scale {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  max-width: 137px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 10px;
+  letter-spacing: -0.08px;
+  color: #e4d7ee;
+}
+
+.ranking-lucky__scale span:nth-child(2),
+.ranking-lucky__scale span:nth-child(3) {
+  color: var(--purple-deep);
+}
+
+/* 온보딩 · 발표 (Figma 전체 화면 SVG) */
+.ranking-guide,
+.ranking-announce {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  position: relative;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.ranking-announce__winners {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 238px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 280px;
+  pointer-events: none;
+}
+
+.ranking-announce__winner {
+  flex: 1;
+  max-width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.ranking-announce__winner-medal {
+  display: block;
+  width: 43px;
+  height: 34px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.ranking-announce__winner-medal--lucky {
+  width: 35px;
+  height: 35px;
+}
+
+.ranking-announce__winner-card {
+  width: 100%;
+  height: 144px;
+  border-radius: 10px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.ranking-announce__winner-card--gold {
+  background: var(--yellow);
+}
+
+.ranking-announce__winner-card--lucky {
+  background: var(--green-pale);
+}
+
+.ranking-announce__winner-rank {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--brown-mid);
+}
+
+.ranking-announce__winner-name {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.1px;
+  color: var(--black);
+}
+
+.ranking-announce__winner-score {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 10px;
+  background: var(--white);
+}
+
+.ranking-announce__winner-score img {
+  width: 10px;
+  height: 10px;
+}
+
+.ranking-announce__winner-score span {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.1px;
+  color: var(--dark-brown);
+}
+
+.ranking-announce__winner-reward {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ranking-announce__winner-reward strong {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: var(--black);
+}
+
+.ranking-onboarding__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ranking-guide__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 108px 28px 0;
+  pointer-events: none;
+}
+
+.ranking-guide__title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -0.3px;
+  color: var(--brown-mid);
+}
+
+.ranking-guide__title em {
+  font-style: normal;
+  color: var(--amber);
+}
+
+.ranking-screen-tap {
+  cursor: pointer;
+}
+
+/* 랭킹 메인 아이콘 stretch 방지 */
+.ranking-app img[src$=".svg"] {
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.ranking-hero__reward-value img,
+.ranking-announce__winner-reward img,
+.ranking-podium3__score img,
+.ranking-row__score img {
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* 시즌 */
+.ranking-season-hero {
+  position: relative;
+  height: 125px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--yellow-pale);
+}
+
+.ranking-season-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.ranking-season-hero__tag {
+  position: relative;
+  z-index: 1;
+  margin: 21px 0 0 26px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.1px;
+  color: var(--dark-brown);
+}
+
+.ranking-season-hero__title {
+  position: relative;
+  z-index: 1;
+  margin: 3px 0 0 26px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  color: var(--dark-brown);
+}
+
+.ranking-season-hero__timer {
+  position: relative;
+  z-index: 1;
+  margin: 12px 0 0 26px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 15px;
+  color: var(--dark-brown);
+}
+
+.ranking-season-hero__timer img {
+  width: 15px;
+  height: 15px;
+}
+
+.ranking-season-hero__timer strong {
+  margin-left: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.ranking-season-hero__cookie {
+  position: absolute;
+  right: 16px;
+  top: 19px;
+  width: 74px;
+  height: 86px;
+  z-index: 1;
+  object-fit: contain;
+}
+
+.ranking-podium3 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 14px;
+}
+
+.ranking-podium3__item {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ranking-podium3__item--side {
+  margin-top: 37px;
+}
+
+.ranking-podium3__item--center {
+  z-index: 1;
+}
+
+.ranking-podium3__medal {
+  display: block;
+  width: 27px;
+  height: 22px;
+  margin-bottom: 4px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.ranking-podium3__card {
+  width: 100%;
+  height: 128px;
+  border-radius: 10px;
+  background: var(--cream);
+  border: 0.5px solid var(--sand);
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.ranking-podium3__item--center .ranking-podium3__card {
+  height: 144px;
+  background: var(--yellow);
+  border-color: var(--yellow);
+}
+
+.ranking-podium3__rank {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--brown-mid);
+}
+
+.ranking-podium3__name {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.1px;
+  color: var(--black);
+}
+
+.ranking-podium3__score {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 10px;
+  background: var(--white);
+}
+
+.ranking-podium3__score img {
+  width: 10px;
+  height: 10px;
+}
+
+.ranking-podium3__score span {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--dark-brown);
+}
+
+.ranking-season-board .ranking-row {
+  min-height: 41px;
+  padding: 8px 15px;
+  background: var(--white);
+}
+
+.ranking-season-board .ranking-row--me {
+  background: var(--yellow);
+}
+
+.ranking-season-board .ranking-row__score {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+  width: auto;
+  flex: 0 0 auto;
+}
+
+.ranking-season-board .ranking-row__score img {
+  width: 10px;
+  height: 10px;
+}
+
+.ranking-season-board .ranking-table-head {
+  display: flex;
+}
+
+.ranking-season-board .ranking-table-head__name {
+  flex: 1;
+}
+
+.ranking-season-board .ranking-table-head__score {
+  width: auto;
+  flex: 0;
+  margin-left: auto;
+  padding-right: 4px;
+  text-align: right;
+}

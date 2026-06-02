@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>퀴즈 만들기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/myquiz-common.css" />
+    <link rel="stylesheet" href="../../css/myquiz.css" />
+  </head>
+  <body>
+    <main class="myquiz-app" id="myquiz-create">
+      <header class="myquiz-header">
+        <button class="myquiz-header__back" type="button" id="create-back" aria-label="뒤로 가기">
+          <img src="/assets/images/Back Button.svg" alt="" />
+        </button>
+        <h1 class="myquiz-header__title">퀴즈 만들기</h1>
+      </header>
+
+      <div class="myquiz-body">
+        <div class="myquiz-scroll myquiz-create-scroll">
+          <section class="myquiz-step-card">
+            <div class="myquiz-step-head">
+              <span class="myquiz-step-num">1</span>
+              <h2>웹툰을 선택해주세요</h2>
+            </div>
+            <div class="myquiz-scroll-row" id="webtoon-list">
+              <button class="myquiz-webtoon myquiz-webtoon--active" type="button" data-webtoon="1">
+                <span class="myquiz-webtoon__thumb">
+                  <img src="/assets/images/myquiz/thumb-detail.png" alt="" />
+                </span>
+                <span class="myquiz-webtoon__label">AI. 닥터</span>
+              </button>
+              <button class="myquiz-webtoon" type="button" data-webtoon="2">
+                <span class="myquiz-webtoon__thumb">
+                  <img src="/assets/images/myquiz/thumb-detail.png" alt="" />
+                </span>
+                <span class="myquiz-webtoon__label">AI. 닥터</span>
+              </button>
+              <button class="myquiz-webtoon" type="button" data-webtoon="3">
+                <span class="myquiz-webtoon__thumb">
+                  <img src="/assets/images/myquiz/thumb-detail.png" alt="" />
+                </span>
+                <span class="myquiz-webtoon__label">AI. 닥터</span>
+              </button>
+              <button class="myquiz-webtoon" type="button" data-webtoon="4">
+                <span class="myquiz-webtoon__thumb">
+                  <img src="/assets/images/myquiz/thumb-detail.png" alt="" />
+                </span>
+                <span class="myquiz-webtoon__label">AI. 닥터</span>
+              </button>
+              <button class="myquiz-webtoon myquiz-webtoon--dim" type="button" data-webtoon="5" disabled>
+                <span class="myquiz-webtoon__thumb">
+                  <img src="/assets/images/myquiz/thumb-detail.png" alt="" />
+                </span>
+                <span class="myquiz-webtoon__label">AI. 닥터</span>
+              </button>
+            </div>
+            <button class="myquiz-scroll-more" type="button" aria-label="더 보기">
+              <img src="/assets/images/myquiz/chevron-scroll.svg" alt="" />
+            </button>
+          </section>
+
+          <section class="myquiz-step-card myquiz-step-card--episode">
+            <div class="myquiz-step-head">
+              <span class="myquiz-step-num">2</span>
+              <h2>회차를 선택해주세요</h2>
+            </div>
+            <div class="myquiz-episodes" id="episode-list" role="listbox" aria-label="회차 선택">
+              <button class="myquiz-episode myquiz-episode--active" type="button" data-episode="1" role="option" aria-selected="true">1</button>
+              <button class="myquiz-episode" type="button" data-episode="2" role="option" aria-selected="false">2</button>
+              <button class="myquiz-episode" type="button" data-episode="3" role="option" aria-selected="false">3</button>
+              <button class="myquiz-episode" type="button" data-episode="4" role="option" aria-selected="false">4</button>
+              <button class="myquiz-episode" type="button" data-episode="5" role="option" aria-selected="false">5</button>
+              <button class="myquiz-episode" type="button" data-episode="6" role="option" aria-selected="false">6</button>
+              <button class="myquiz-episode myquiz-episode--dim" type="button" data-episode="7" role="option" aria-selected="false">7</button>
+              <button class="myquiz-episode myquiz-episode--dim" type="button" data-episode="8" role="option" aria-selected="false">8</button>
+            </div>
+            <button class="myquiz-scroll-more myquiz-scroll-more--episode" type="button" aria-label="더 보기">
+              <img src="/assets/images/myquiz/chevron-scroll.svg" alt="" />
+            </button>
+          </section>
+
+          <section class="myquiz-step-card">
+            <div class="myquiz-step-head">
+              <span class="myquiz-step-num">3</span>
+              <h2>문제를 만들어주세요</h2>
+            </div>
+            <h3 class="myquiz-field-label">퀴즈 질문</h3>
+            <input
+              class="myquiz-input myquiz-input--question"
+              type="text"
+              id="quiz-question"
+              placeholder="예: 무케가 왕이 되겠다고 결심하게 된 이유는?"
+              maxlength="120"
+            />
+
+            <h3 class="myquiz-field-label myquiz-field-label--spaced">퀴즈 정답 &amp; 오답</h3>
+            <div class="myquiz-answers" id="answer-list">
+              <div class="myquiz-answer-row myquiz-answer-row--editable is-correct" data-answer-index="0">
+                <span class="myquiz-answer-icon">
+                  <img src="/assets/images/myquiz/icon-answer-o.svg" alt="정답" />
+                </span>
+                <input class="myquiz-input" type="text" placeholder="정답 작성하기" aria-label="정답" />
+              </div>
+              <div class="myquiz-answer-row myquiz-answer-row--editable" data-answer-index="1">
+                <span class="myquiz-answer-icon myquiz-answer-icon--wrong">
+                  <img src="/assets/images/myquiz/icon-answer-x.svg" alt="오답" />
+                </span>
+                <input class="myquiz-input" type="text" placeholder="오답 작성하기" aria-label="오답 1" />
+              </div>
+              <div class="myquiz-answer-row myquiz-answer-row--editable" data-answer-index="2">
+                <span class="myquiz-answer-icon myquiz-answer-icon--wrong">
+                  <img src="/assets/images/myquiz/icon-answer-x.svg" alt="오답" />
+                </span>
+                <input class="myquiz-input" type="text" placeholder="오답 작성하기" aria-label="오답 2" />
+              </div>
+              <div class="myquiz-answer-row myquiz-answer-row--editable" data-answer-index="3">
+                <span class="myquiz-answer-icon myquiz-answer-icon--wrong">
+                  <img src="/assets/images/myquiz/icon-answer-x.svg" alt="오답" />
+                </span>
+                <input class="myquiz-input" type="text" placeholder="오답 작성하기" aria-label="오답 3" />
+              </div>
+            </div>
+          </section>
+
+          <aside class="myquiz-notice">
+            <img src="/assets/images/myquiz/notice-illus.svg" alt="" />
+            <div>
+              <p>부적절한 내용은 검수 후 등록이 거부될 수 있습니다!</p>
+              <p>등록된 퀴즈는 24시간 내 검토 후 공개해요!</p>
+              <p>등록하신 웹툰 퀴즈에 대한 저작권은 프레시밀크에 귀속 됩니다.</p>
+            </div>
+          </aside>
+        </div>
+
+        <footer class="myquiz-footer myquiz-create-footer">
+          <button class="myquiz-btn" type="button" id="submit-quiz">문제 등록하기</button>
+        </footer>
+
+        <div class="myquiz-wave-bar" aria-hidden="true">
+          <img class="myquiz-wave-bar__bg" src="/assets/images/bottom_background.svg" alt="" />
+        </div>
+      </div>
+    </main>
+
+    <div class="myquiz-modal" id="modal-exit" hidden>
+      <div class="myquiz-modal__backdrop" data-modal-close></div>
+      <div class="myquiz-modal__card" role="dialog" aria-labelledby="modal-exit-title" aria-modal="true">
+        <button class="myquiz-modal__close" type="button" data-modal-close aria-label="닫기">
+          <img src="/assets/images/myquiz/modal-close.svg" alt="" />
+        </button>
+        <div class="myquiz-modal__icon">
+          <img src="/assets/images/myquiz/modal-question.svg" alt="" />
+        </div>
+        <h2 class="myquiz-modal__title" id="modal-exit-title">
+          작성중인 내용이 있습니다.<br />정말 나가시겠습니까?
+        </h2>
+        <p class="myquiz-modal__text">
+          등록하지 않고 페이지를 벗어날 경우,<br />지금까지 작성한 내용이 사라집니다.
+        </p>
+        <div class="myquiz-modal__actions">
+          <button class="myquiz-modal__btn myquiz-modal__btn--primary" type="button" data-modal-close>머무르기</button>
+          <a class="myquiz-modal__btn myquiz-modal__btn--ghost" href="/pages/myquiz/index.html">이동하기</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/myquiz.js"></script>
+  </body>
+</html>

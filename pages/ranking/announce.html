@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일간 순위 발표</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/ranking-common.css" />
+    <link rel="stylesheet" href="../../css/ranking.css" />
+  </head>
+  <body>
+    <main
+      class="ranking-announce ranking-screen-tap"
+      data-ranking-next="/pages/ranking/index.html"
+      tabindex="0"
+      role="button"
+      aria-label="화면을 눌러 랭킹으로 이동"
+    >
+      <img class="ranking-onboarding__frame" src="/assets/images/ranking/onboarding2.svg" alt="" />
+
+      <div class="ranking-announce__winners" aria-label="당첨자">
+        <article class="ranking-announce__winner">
+          <img class="ranking-announce__winner-medal" src="/assets/images/ranking/medal-announce-gold.svg" alt="" />
+          <div class="ranking-announce__winner-card ranking-announce__winner-card--gold">
+            <p class="ranking-announce__winner-rank">1위</p>
+            <span class="ranking-avatar ranking-avatar--lg"><img src="/assets/images/ranking/avatar-head.svg" alt="" /></span>
+            <p class="ranking-announce__winner-name">판타지마왕</p>
+            <div class="ranking-announce__winner-score">
+              <img src="/assets/images/ranking/score-icon.svg" alt="" />
+              <span>22,680</span>
+            </div>
+          </div>
+          <div class="ranking-announce__winner-reward">
+            <img src="/assets/images/ranking/cookie-chip.svg" alt="" />
+            <strong>50</strong>
+          </div>
+        </article>
+
+        <article class="ranking-announce__winner">
+          <img
+            class="ranking-announce__winner-medal ranking-announce__winner-medal--lucky"
+            src="/assets/images/ranking/medal-announce-lucky.svg"
+            alt=""
+          />
+          <div class="ranking-announce__winner-card ranking-announce__winner-card--lucky">
+            <p class="ranking-announce__winner-rank">27위</p>
+            <span class="ranking-avatar ranking-avatar--lg"><img src="/assets/images/ranking/avatar-head.svg" alt="" /></span>
+            <p class="ranking-announce__winner-name">힘법사궁수</p>
+            <div class="ranking-announce__winner-score">
+              <img src="/assets/images/ranking/score-icon.svg" alt="" />
+              <span>22,680</span>
+            </div>
+          </div>
+          <div class="ranking-announce__winner-reward">
+            <img src="/assets/images/ranking/cookie-chip.svg" alt="" />
+            <strong>20</strong>
+          </div>
+        </article>
+      </div>
+    </main>
+    <script src="../../js/ranking.js"></script>
+  </body>
+</html>
