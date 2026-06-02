@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --screen-width: 372px;
   --screen-height: 812px;
   --bake-header-offset: 76px;
@@ -25,7 +25,7 @@ body {
   position: relative;
   overflow: hidden;
   background-color: #ffd95e;
-  background-image: url("/assets/images/agree_back.svg");
+  background-image: url("/assets/images/common/bg-agree.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: top center;
