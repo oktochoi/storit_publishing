@@ -35,7 +35,7 @@
     if (closeBtn) {
       closeBtn.addEventListener("click", function () {
         if (document.body.classList.contains("invite-standalone")) {
-          window.location.href = "/pages/main/index.html";
+          window.location.href = STORIT.page("main/index.html");
           return;
         }
         closeInvite();

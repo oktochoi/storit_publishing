@@ -18,8 +18,8 @@
       var line = tab.querySelector(".shop-tab__line");
       if (line) {
         line.src = isActive
-          ? "/assets/images/shop/tab-line-active.svg"
-          : "/assets/images/shop/tab-line-inactive.svg";
+          ? STORIT.asset("images/shop/tab-line-active.svg")
+          : STORIT.asset("images/shop/tab-line-inactive.svg");
       }
       if (!isActive) {
         tab.querySelector("span").style.color = "#888880";

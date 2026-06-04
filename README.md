@@ -44,14 +44,21 @@ storit_publishing/
 
 - **BEM** 유사 클래스: `블록__요소--수식어` (예: `invite-sheet__close`)
 - 화면별 공통 CSS: `{기능}-common.css` (`invite-common.css`, `shop-common.css`)
-- 에셋 경로: 절대 경로 `/assets/...` (로컬 Live Server·배포 공통)
+- 에셋 경로: **`../../assets/...`** (HTML), **`../assets/...`** (CSS) — 파일 더블클릭(`file://`)으로 열어도 이미지 표시
+- JS에서 동적 경로: `STORIT.asset()`, `STORIT.page()` (`js/storit-paths.js` 선로드)
 - 닫기 버튼 아이콘: `/assets/icons/XIcon.svg` (`object-fit: contain`)
+
+## 화면 열기 (Live Server 없이)
+
+1. 프로젝트 루트의 **`index.html`** 을 더블클릭해 목록에서 화면 선택  
+2. 또는 `pages/…/index.html` 을 직접 열기 (같은 폴더 깊이면 이미지 경로 동일)
 
 ## 주요 화면 · 미리보기 URL
 
 | 화면 | 경로 |
 |------|------|
-| 홈 + 친구 초대 모달 | `/pages/main/index.html?invite=1` |
+| 화면 목록 (루트) | `index.html` |
+| 홈 + 친구 초대 모달 | `pages/main/index.html?invite=1` |
 | 친구 초대 별도 보상 | `?reward=1` |
 | 상점 · 쿠키 부족 모달 | `/pages/shop/product.html?modal=cookie` |
 | 상점 · 발급 실패 모달 | `?modal=fail` |
@@ -96,7 +103,7 @@ storit_publishing/
 
 - [ ] 새 이미지는 해당 **기능 폴더**에만 추가
 - [ ] 파일명 **kebab-case**, 폴더명 중복 접두어 없음
-- [ ] HTML/CSS/JS 경로가 `/assets/...` 로 통일되어 있는지
+- [ ] HTML `../../assets/`, CSS `../assets/` 상대 경로 사용 여부
 - [ ] 테스트·중복 에셋(`_test.png`, 미사용 SVG) 제거 여부
 
 ---

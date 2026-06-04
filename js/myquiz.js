@@ -75,7 +75,7 @@
   if (backBtn) {
     backBtn.addEventListener("click", function () {
       if (hasContent()) openModal();
-      else window.location.href = "/pages/myquiz/index.html";
+      else window.location.href = STORIT.page("myquiz/index.html");
     });
   }
 
@@ -133,7 +133,7 @@
 
   if (submitBtn) {
     submitBtn.addEventListener("click", function () {
-      window.location.href = "/pages/myquiz/complete.html";
+      window.location.href = STORIT.page("myquiz/complete.html");
     });
   }
 

@@ -1,26 +1,26 @@
 (function () {
   var cats = document.querySelectorAll(".shop-cat");
   var catIcons = {
-    all: { active: "/assets/images/shop/cat-all-fill.svg", default: "/assets/images/shop/cat-all-fill.svg" },
+    all: { active: STORIT.asset("images/shop/cat-all-fill.svg"), default: STORIT.asset("images/shop/cat-all-fill.svg") },
     coupon: {
-      active: "/assets/images/shop/cat-coupon-fill.svg",
-      default: "/assets/images/shop/cat-coupon-outline.svg",
+      active: STORIT.asset("images/shop/cat-coupon-fill.svg"),
+      default: STORIT.asset("images/shop/cat-coupon-outline.svg"),
     },
     store: {
-      active: "/assets/images/shop/cat-store-outline.svg",
-      default: "/assets/images/shop/cat-store-outline.svg",
+      active: STORIT.asset("images/shop/cat-store-outline.svg"),
+      default: STORIT.asset("images/shop/cat-store-outline.svg"),
     },
     cafe: {
-      active: "/assets/images/shop/cat-cafe-fill.svg",
-      default: "/assets/images/shop/cat-cafe-outline.svg",
+      active: STORIT.asset("images/shop/cat-cafe-fill.svg"),
+      default: STORIT.asset("images/shop/cat-cafe-outline.svg"),
     },
     food: {
-      active: "/assets/images/shop/cat-food-fill.svg",
-      default: "/assets/images/shop/cat-food-outline.svg",
+      active: STORIT.asset("images/shop/cat-food-fill.svg"),
+      default: STORIT.asset("images/shop/cat-food-outline.svg"),
     },
     etc: {
-      active: "/assets/images/shop/cat-more-fill.svg",
-      default: "/assets/images/shop/cat-more-outline.svg",
+      active: STORIT.asset("images/shop/cat-more-fill.svg"),
+      default: STORIT.asset("images/shop/cat-more-outline.svg"),
     },
   };
 

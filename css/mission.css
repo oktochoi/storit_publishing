@@ -34,7 +34,7 @@ body {
   position: relative;
   overflow: hidden;
   background-color: var(--cookie);
-  background-image: url("/assets/images/common/bg-main.svg");
+  background-image: url("../assets/images/common/bg-main.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: top center;

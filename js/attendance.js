@@ -34,8 +34,8 @@
 
   function stampSrc(day) {
     return day <= checkedUntil
-      ? "/assets/images/attendance/stamp-checked.svg"
-      : "/assets/images/attendance/stamp-empty.svg";
+      ? STORIT.asset("images/attendance/stamp-checked.svg")
+      : STORIT.asset("images/attendance/stamp-empty.svg");
   }
 
   for (var i = 0; i < firstDay; i += 1) {

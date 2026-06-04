@@ -14,7 +14,7 @@
         btn.classList.add("quiz-answer--active");
 
         if (mascotImg) {
-          mascotImg.src = "/assets/images/quiz/mascot-selected.svg";
+          mascotImg.src = STORIT.asset("images/quiz/mascot-selected.svg");
         }
 
         if (progressFill) progressFill.style.width = "100%";
@@ -23,8 +23,8 @@
         window.setTimeout(function () {
           var isCorrect = btn.hasAttribute("data-correct");
           window.location.href = isCorrect
-            ? "/pages/quiz/result.html"
-            : "/pages/quiz/result-low.html";
+            ? STORIT.page("quiz/result.html")
+            : STORIT.page("quiz/result-low.html");
         }, 500);
       });
     });

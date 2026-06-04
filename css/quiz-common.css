@@ -57,7 +57,7 @@ body {
 
 .quiz-app--play {
   background-color: var(--yellow);
-  background-image: url("/assets/images/common/bg-main.svg");
+  background-image: url("../assets/images/common/bg-main.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: top center;
@@ -73,7 +73,7 @@ body {
 
 .quiz-app--result {
   background-color: var(--cream);
-  background-image: url("/assets/images/common/bg-main.svg");
+  background-image: url("../assets/images/common/bg-main.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: top center;
