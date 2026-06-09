@@ -4,21 +4,39 @@
   const ingredientChips = document.querySelectorAll(".ingredient-chip");
   const bakeButton = document.querySelector(".mission-bake-btn");
   const missionComplete = document.querySelector(".mission-complete");
+  const checkIconSrc = "../../assets/images/missions/icon-check-done.svg";
 
   if (!missionList) {
     return;
   }
 
+  function createDoneState() {
+    const doneState = document.createElement("div");
+    doneState.className = "mission-item__state mission-item__state--done";
+    doneState.innerHTML =
+      '<span class="mission-item__badge">기본 재료</span>' +
+      '<div class="mission-item__done-label">' +
+      '<img src="' +
+      checkIconSrc +
+      '" alt="" width="10" height="8" />' +
+      "<strong>완료</strong>" +
+      "</div>";
+    return doneState;
+  }
+
   function completeMissionItem(item, actionEl) {
     const progressBar = item.querySelector(".mission-item__progress span");
+    const progressCount = item.querySelector(".mission-item__progress-row em");
+
     if (progressBar) {
       progressBar.style.width = "100%";
     }
 
-    const doneState = document.createElement("div");
-    doneState.className = "mission-item__state mission-item__state--done";
-    doneState.innerHTML = "<small>기본 재료</small><strong>완료</strong>";
-    actionEl.replaceWith(doneState);
+    if (progressCount) {
+      progressCount.textContent = "1 / 1";
+    }
+
+    actionEl.replaceWith(createDoneState());
 
     const itemIndex = Array.from(missionList.children).indexOf(item);
     if (ingredientChips[itemIndex]) {

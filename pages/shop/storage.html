@@ -38,26 +38,22 @@
           </div>
 
           <div id="panel-available" class="shop-panel" role="tabpanel">
-            <p class="shop-storage-count"><span>사용 가능</span> <span>2</span></p>
+            <p class="shop-storage-count"><span>사용 가능</span> <span>0</span></p>
+
+            <section class="shop-storage-notice" aria-label="안내사항">
+              <div class="shop-storage-notice__head">
+                <img src="../../assets/images/shop/icon-shield.svg" alt="" width="15" height="18" />
+                <h3>안내사항</h3>
+              </div>
+              <ul class="shop-info-list">
+                <li>
+                  <img src="../../assets/images/shop/bullet-check.svg" alt="" />
+                  유효기간이 지난 기프티콘은 자동으로 사용 완료 처리됩니다.
+                </li>
+              </ul>
+            </section>
 
             <div class="shop-voucher-list">
-              <a class="shop-voucher-card" href="../../pages/shop/voucher.html">
-                <img class="shop-voucher-card__thumb" src="../../assets/images/shop/product-thumb.svg" alt="" />
-                <div>
-                  <span class="shop-voucher-card__badge">D-28</span>
-                  <p class="shop-voucher-card__name">네이버페이 포인트 5,000원</p>
-                  <div class="shop-voucher-card__meta">
-                    <img src="../../assets/images/shop/cookie-xs.svg" alt="" />
-                    <span>50</span>
-                    <span>쿠키 교환</span>
-                  </div>
-                  <div class="shop-voucher-card__date">
-                    <img src="../../assets/images/shop/icon-cal-sm.svg" alt="" />
-                    <span>~2026.05.21</span>
-                  </div>
-                </div>
-                <span class="shop-voucher-card__action">사용하기</span>
-              </a>
               <a class="shop-voucher-card" href="../../pages/shop/voucher.html">
                 <img class="shop-voucher-card__thumb" src="../../assets/images/shop/product-thumb.svg" alt="" />
                 <div>
@@ -78,35 +74,15 @@
             </div>
 
             <div class="shop-storage-empty">
-              <img src="../../assets/images/shop/empty-box.svg" alt="" />
+              <img src="../../assets/images/shop/nocookie.svg" alt="" />
               <h3>사용 가능한 보상이 더 없어요!</h3>
               <p>다양한 활동으로 쿠키를 모아<br />멋진 보상을 교환해보세요</p>
               <a class="shop-storage-cta" href="../../pages/mission/index.html">쿠키 모으러 가기</a>
             </div>
-
-            <section class="shop-storage-notice" aria-label="안내사항">
-              <div class="shop-storage-notice__head">
-                <img src="../../assets/images/shop/icon-shield.svg" alt="" width="15" height="18" />
-                <h3>안내사항</h3>
-              </div>
-              <ul class="shop-info-list">
-                <li>
-                  <img src="../../assets/images/shop/bullet-check.svg" alt="" />
-                  유효기간이 지난 기프티콘은 자동으로 사용 완료 처리됩니다.
-                </li>
-              </ul>
-              <img class="shop-storage-notice__illus" src="../../assets/images/shop/guide-shield.svg" alt="" />
-            </section>
           </div>
 
           <div id="panel-used" class="shop-panel" role="tabpanel" hidden>
-            <div class="shop-storage-toolbar">
-              <p class="shop-storage-count"><span>사용 완료</span> <span>1</span></p>
-              <button class="shop-pill shop-pill--white shop-storage-sort" type="button">
-                최신순
-                <img src="../../assets/images/shop/chevron-sm.svg" alt="" width="8" height="8" style="transform: rotate(90deg)" />
-              </button>
-            </div>
+            <p class="shop-storage-count"><span>사용 완료</span> <span>1</span></p>
 
             <div class="shop-voucher-list">
               <div class="shop-voucher-card shop-voucher-card--used">
@@ -128,7 +104,7 @@
             </div>
 
             <div class="shop-storage-empty shop-storage-empty--used">
-              <img src="../../assets/images/shop/empty-box.svg" alt="" />
+              <img src="../../assets/images/shop/nocookie.svg" alt="" />
               <h3>사용 가능한 보상이 더 없어요!</h3>
               <p>다양한 활동으로 쿠키를 모아<br />멋진 보상을 교환해보세요</p>
               <a class="shop-storage-cta" href="../../pages/mission/index.html">쿠키 모으러 가기</a>
@@ -145,7 +121,6 @@
                   유효기간이 지난 기프티콘은 자동으로 사용 완료 처리됩니다.
                 </li>
               </ul>
-              <img class="shop-storage-notice__illus" src="../../assets/images/shop/guide-shield.svg" alt="" />
             </section>
           </div>
         </div>

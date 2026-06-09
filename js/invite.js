@@ -49,16 +49,47 @@
       }
     }
 
+    var toastEl = document.getElementById("invite-toast");
+    var toastTimer;
+
+    function showCopyToast() {
+      if (!toastEl) return;
+      toastEl.hidden = false;
+      toastEl.classList.add("is-visible");
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(function () {
+        toastEl.classList.remove("is-visible");
+        toastEl.hidden = true;
+      }, 2000);
+    }
+
+    function copyInviteCode(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text);
+      }
+      return new Promise(function (resolve, reject) {
+        var textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand("copy");
+          resolve();
+        } catch (error) {
+          reject(error);
+        } finally {
+          document.body.removeChild(textarea);
+        }
+      });
+    }
+
     if (copyBtn && codeEl) {
       copyBtn.addEventListener("click", function () {
         var text = codeEl.textContent.trim();
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text);
-        }
-        copyBtn.setAttribute("aria-label", "복사됨");
-        window.setTimeout(function () {
-          copyBtn.setAttribute("aria-label", "초대 코드 복사");
-        }, 1500);
+        copyInviteCode(text).then(showCopyToast).catch(showCopyToast);
       });
     }
 

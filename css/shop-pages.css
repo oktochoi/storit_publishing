@@ -24,7 +24,19 @@
 .shop-product-price {
   display: flex;
   justify-content: center;
-  margin-top: 8px;
+  margin-top: 0;
+}
+
+.shop-product-price .shop-price--lg {
+  display: flex;
+  width: 80px;
+  height: 35px;
+  padding: 3px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  border-radius: 50px;
+  background: var(--Primary-Yellow, #ffd95e);
 }
 
 .shop-info-card {
@@ -312,9 +324,13 @@
   color: var(--dark-brown);
 }
 
-.shop-exchange-notice {
+.shop-exchange-notice-wrap {
   margin-top: 16px;
-  padding: 18px 19px 18px;
+}
+
+.shop-exchange-notice {
+  position: relative;
+  padding: 18px 19px;
   padding-right: 100px;
   background: var(--beige);
   border: 1px solid var(--beige);
@@ -344,7 +360,7 @@
 .shop-exchange-notice__illus {
   position: absolute;
   right: 19px;
-  top: 18px;
+  top: 26px;
   width: 77px;
   height: 67px;
   object-fit: contain;
@@ -356,6 +372,7 @@
   align-items: center;
   gap: 7px;
   margin-top: 14px;
+  padding-left: 17px;
   font-size: 10px;
   font-weight: 700;
   color: var(--dark-brown);
@@ -403,6 +420,9 @@
 
 .shop-detail-table {
   margin-top: 20px;
+  border: 1px solid var(--beige);
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .shop-detail-row {
@@ -412,18 +432,16 @@
   min-height: 35px;
   padding: 10px 30px;
   background: var(--white);
-  border: 1px solid var(--beige);
+  border: none;
+  border-bottom: 1px solid var(--beige);
+  border-radius: 0;
   font-size: 10px;
   font-weight: 700;
   line-height: 14px;
 }
 
-.shop-detail-row:first-child {
-  border-radius: 0 0 15px 15px;
-}
-
 .shop-detail-row:last-child {
-  border-radius: 15px 15px 0 0;
+  border-bottom: none;
 }
 
 .shop-detail-row span:first-child {
@@ -498,10 +516,13 @@
 }
 
 .shop-tab span {
+  color: var(--Neutral-Gray, #888880);
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 12px;
+  font-style: normal;
   font-weight: 700;
   line-height: 18px;
-  color: var(--gray);
 }
 
 .shop-tab--active span {
@@ -518,35 +539,11 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  margin: 0;
+  min-height: 18px;
+  margin: 18px 0 0;
   font-size: 12px;
   font-weight: 700;
   line-height: 18px;
-}
-
-.shop-storage-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 12px;
-  padding-right: 16px;
-}
-
-.shop-storage-toolbar .shop-storage-count {
-  margin-top: 0;
-}
-
-#panel-available > .shop-storage-count {
-  margin-top: 12px;
-}
-
-.shop-storage-sort {
-  flex-shrink: 0;
-}
-
-.shop-storage-sort img {
-  width: 8px;
-  height: 8px;
 }
 
 .shop-panel:has(.shop-voucher-card) .shop-storage-empty {
@@ -656,45 +653,56 @@
 
 .shop-storage-empty img {
   width: 97px;
+  height: 81px;
   margin: 0 auto;
+  object-fit: contain;
 }
 
 .shop-storage-empty h3 {
   margin-top: 16px;
+  color: var(--Neutral-Dark-Brown, #3d2000);
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 12px;
+  font-style: normal;
   font-weight: 700;
   line-height: 18px;
-  color: var(--dark-brown);
 }
 
 .shop-storage-empty p {
   margin-top: 3px;
+  color: var(--Neutral-Dark-Brown, #3d2000);
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 10px;
+  font-style: normal;
   font-weight: 500;
   line-height: 14px;
-  color: var(--dark-brown);
 }
 
 .shop-storage-cta {
   display: inline-flex;
+  align-items: center;
+  gap: 10px;
   margin-top: 20px;
   padding: 8px 16px;
-  border: 1px solid var(--amber);
   border-radius: 14px;
-  background: var(--yellow);
+  border: 1px solid var(--Primary-Amber, #ef9f27);
+  background: var(--Primary-Yellow, #ffd95e);
+  color: var(--Neutral-Dark-Brown, #3d2000);
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 14px;
+  font-style: normal;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.14px;
-  color: var(--dark-brown);
   text-decoration: none;
 }
 
 .shop-storage-notice {
-  position: relative;
   margin-top: 24px;
   padding: 14px 19px 18px;
-  padding-right: 88px;
   background: var(--beige);
   border: 1px solid var(--beige);
   border-radius: 10px;
@@ -721,28 +729,6 @@
 
 .shop-storage-notice .shop-info-list {
   margin-top: 5px;
-}
-
-.shop-storage-notice__illus {
-  position: absolute;
-  right: 19px;
-  bottom: 14px;
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  pointer-events: none;
-}
-
-.shop-storage-empty--used h3 {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: -0.14px;
-}
-
-.shop-storage-empty--used p {
-  font-size: 11px;
-  line-height: 15px;
-  letter-spacing: -0.11px;
 }
 
 .shop-panel[hidden] {

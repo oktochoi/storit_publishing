@@ -45,13 +45,23 @@
 
           <div class="attendance-calendar">
             <div class="attendance-calendar__nav">
-              <img
-                class="attendance-calendar__nav-arrows"
-                src="../../assets/images/attendance/month-nav.svg"
-                alt=""
-                aria-hidden="true"
-              />
+              <button
+                class="attendance-calendar__nav-btn"
+                type="button"
+                data-calendar-nav="prev"
+                aria-label="이전 달"
+              >
+                <img src="../../assets/images/attendance/calendar-nav-prev.svg" alt="" />
+              </button>
               <span class="attendance-calendar__nav-label">2025년 5월</span>
+              <button
+                class="attendance-calendar__nav-btn"
+                type="button"
+                data-calendar-nav="next"
+                aria-label="다음 달"
+              >
+                <img src="../../assets/images/attendance/calendar-nav-next.svg" alt="" />
+              </button>
             </div>
 
             <div class="attendance-weekdays" aria-hidden="true">
@@ -72,7 +82,7 @@
       <div class="attendance-actions">
         <button class="attendance-check-btn" type="button">출석하기</button>
 
-        <a class="attendance-mission" href="../../pages/mission/index.html">
+        <a class="attendance-mission" href="../../pages/mission/index.html" hidden>
           <img class="attendance-mission__icon" src="../../assets/images/attendance/flour.svg" alt="" />
           <div class="attendance-mission__text">
             <strong>오늘의 미션 출석체크 달성!!</strong>

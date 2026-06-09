@@ -120,12 +120,14 @@
 }
 
 .invite-sheet__desc {
-  max-width: 303px;
+  max-width: 100%;
   margin: 0 auto 20px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 18px;
+  letter-spacing: -0.26px;
   text-align: center;
+  white-space: nowrap;
   color: var(--gray);
 }
 
@@ -168,6 +170,31 @@
   display: block;
   width: 20px;
   height: 20px;
+}
+
+.invite-toast {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  z-index: 5;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: rgba(28, 16, 0, 0.9);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.13px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, 6px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.invite-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .invite-btn {

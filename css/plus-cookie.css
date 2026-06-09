@@ -1,6 +1,9 @@
 :root {
   --screen-width: 372px;
   --screen-height: 812px;
+  --primary-amber: #ef9f27;
+  --primary-yellow: #ffd95e;
+  --brown-mid: #5d3300;
 }
 
 * {
@@ -152,10 +155,10 @@ body {
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  border: none;
   border-radius: 16px;
-  background: #5d3300;
-  color: #ffd95e;
+  border: 1px solid var(--primary-amber);
+  background: var(--primary-yellow);
+  color: var(--brown-mid);
   text-align: center;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;

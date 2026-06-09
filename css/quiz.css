@@ -179,9 +179,9 @@
   width: 100%;
   min-height: 50px;
   padding: 10px 20px;
-  border: 1px solid var(--sand);
+  border: 1px solid var(--Yellow-beige, #faefdf);
   border-radius: 15px;
-  background: var(--white);
+  background: var(--Primary-Yellow-Light, #fefaf4);
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -221,7 +221,7 @@
 .quiz-mascot {
   position: absolute;
   left: 50%;
-  bottom: 36px;
+  bottom: 20px;
   transform: translateX(-50%);
   width: 117px;
   height: 146px;
@@ -250,21 +250,7 @@
 .quiz-result-hero {
   position: relative;
   padding: 0 0 4px;
-  min-height: 340px;
   background: transparent;
-}
-
-.quiz-result-hero__confetti {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 350px;
-  max-width: 100%;
-  height: 240px;
-  object-fit: contain;
-  pointer-events: none;
-  z-index: 1;
 }
 
 .quiz-result-hero__layout {
@@ -272,100 +258,35 @@
   width: 100%;
   max-width: 340px;
   margin: 0 auto;
-  padding: 12px 16px 0;
-  min-height: 300px;
+  padding: 0 10px;
   z-index: 2;
-}
-
-.quiz-result-hero__speech {
-  position: absolute;
-  left: 16px;
-  top: 36px;
-  width: 114px;
-  height: 88px;
-  z-index: 4;
-}
-
-.quiz-result-hero__balloon {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
-  pointer-events: none;
-}
-
-.quiz-result-hero__bubble {
-  position: relative;
-  z-index: 1;
-  padding: 14px 12px 22px 14px;
-  font-size: 12px;
-  font-weight: 800;
-  line-height: 18px;
-  letter-spacing: -0.12px;
-  color: var(--brown-text);
-}
-
-.quiz-result-hero__bubble em {
-  font-style: normal;
-  color: var(--amber);
 }
 
 .quiz-result-hero__center {
   position: relative;
-  width: 290px;
-  height: 302px;
-  margin: 4px auto 28px;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto 20px;
 }
 
-.quiz-result-hero__ring {
+.quiz-result-hero__art {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.quiz-result-hero__cookie {
-  position: absolute;
-  left: 50%;
-  top: 46%;
-  transform: translate(-50%, -50%);
-  width: 158px;
   height: auto;
-  max-height: 182px;
   object-fit: contain;
-  pointer-events: none;
 }
 
-.quiz-result-hero--low .quiz-result-hero__speech {
-  width: 120px;
-  height: 88px;
-  aspect-ratio: 15 / 11;
+.quiz-result-hero--high .quiz-result-hero__art {
+  aspect-ratio: 1420 / 1108;
 }
 
-.quiz-result-hero--low .quiz-result-hero__center {
-  width: 290px;
-  height: 302px;
-  margin: 4px auto 28px;
-}
-
-.quiz-result-hero--low .quiz-result-hero__low-rank {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center center;
-}
-
-.quiz-result-hero--low .quiz-result-hero__score {
-  bottom: -6px;
+.quiz-result-hero--low .quiz-result-hero__art {
+  aspect-ratio: 1423 / 1105;
 }
 
 .quiz-result-hero__score {
   position: absolute;
-  left: 50%;
-  bottom: -6px;
+  left: 51%;
   transform: translateX(-50%);
   min-width: 125px;
   height: 57px;
@@ -373,23 +294,38 @@
   align-items: center;
   justify-content: center;
   padding: 0 20px;
-  border: 5px solid var(--yellow-orange);
-  border-radius: 25px;
-  background: var(--yellow-pale);
-  box-shadow: 1.2px 1.2px 1.2px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
   z-index: 5;
+  pointer-events: none;
+}
+
+.quiz-result-hero--high .quiz-result-hero__score {
+  bottom: 2.8%;
+}
+
+.quiz-result-hero--low .quiz-result-hero__score {
+  bottom: 0.5%;
 }
 
 .quiz-result-hero__score-value {
-  font-size: 37px;
+  color: var(--Neutral-Brown-Mid, #5d3300);
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 37.174px;
+  font-style: normal;
   font-weight: 900;
   line-height: 40px;
-  letter-spacing: -0.37px;
-  color: var(--brown-mid);
+  letter-spacing: -0.372px;
 }
 
 .quiz-result-hero__score-value span {
+  color: var(--Neutral-Brown-Mid, #5d3300);
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 20px;
+  font-style: normal;
   font-weight: 700;
   line-height: 18px;
 }

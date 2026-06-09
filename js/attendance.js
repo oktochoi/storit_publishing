@@ -46,9 +46,28 @@
     grid.appendChild(blank);
   }
 
+  function markTodayChecked() {
+    if (today <= checkedUntil) {
+      return;
+    }
+    checkedUntil = today;
+
+    var todayCell = grid.querySelector('.attendance-day[data-day="' + today + '"]');
+    if (!todayCell) {
+      return;
+    }
+
+    var stamp = todayCell.querySelector(".attendance-day__stamp");
+    if (stamp) {
+      stamp.src = STORIT.asset("images/attendance/stamp-checked.svg");
+      stamp.alt = "출석 완료";
+    }
+  }
+
   for (var day = 1; day <= daysInMonth; day += 1) {
     var cell = document.createElement("div");
     cell.className = "attendance-day";
+    cell.setAttribute("data-day", String(day));
 
     var num = document.createElement("span");
     num.className = numClass(day);
@@ -65,6 +84,8 @@
   }
 
   var checkBtn = document.querySelector(".attendance-check-btn");
+  var missionBanner = document.querySelector(".attendance-mission");
+
   if (checkBtn) {
     checkBtn.addEventListener("click", function () {
       if (checkBtn.disabled) {
@@ -72,6 +93,10 @@
       }
       checkBtn.disabled = true;
       checkBtn.classList.add("attendance-check-btn--done");
+      markTodayChecked();
+      if (missionBanner) {
+        missionBanner.hidden = false;
+      }
     });
   }
 })();

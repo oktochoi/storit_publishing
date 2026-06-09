@@ -192,34 +192,45 @@ body {
 }
 
 .attendance-calendar__nav {
-  position: relative;
   flex-shrink: 0;
   height: 38px;
+  padding: 0 16px;
   background: var(--beige);
   border-bottom: 1px solid var(--beige);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .attendance-calendar__nav-label {
-  position: relative;
-  z-index: 1;
   color: var(--month-brown);
   font-size: 13.6px;
   font-weight: 700;
   line-height: normal;
 }
 
-.attendance-calendar__nav-arrows {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: calc(100% - 32px);
-  max-width: 307px;
+.attendance-calendar__nav-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.attendance-calendar__nav-btn img {
+  width: 8px;
   height: 14px;
   object-fit: contain;
-  pointer-events: none;
+}
+
+.attendance-calendar__nav-btn:active {
+  opacity: 0.7;
 }
 
 .attendance-weekdays {
@@ -368,6 +379,10 @@ body {
   color: var(--gray);
   box-shadow: none;
   cursor: default;
+}
+
+.attendance-mission[hidden] {
+  display: none;
 }
 
 .attendance-mission {

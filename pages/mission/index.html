@@ -34,23 +34,33 @@
 
         <section class="ingredient-strip" aria-label="재료 수집 진행도">
           <div class="ingredient-chip ingredient-chip--done">
-            <img src="../../assets/images/missions/butter.svg" alt="" />
+            <div class="ingredient-chip__circle">
+              <img src="../../assets/images/missions/butter.svg" alt="" />
+            </div>
             <span>버터</span>
           </div>
           <div class="ingredient-chip ingredient-chip--done">
-            <img class="flour-icon flour-icon--chip" src="../../assets/images/missions/flour.svg" alt="" />
+            <div class="ingredient-chip__circle">
+              <img class="flour-icon flour-icon--chip" src="../../assets/images/missions/flour.svg" alt="" />
+            </div>
             <span>밀가루</span>
           </div>
           <div class="ingredient-chip ingredient-chip--done">
-            <img src="../../assets/images/missions/milk.svg" alt="" />
+            <div class="ingredient-chip__circle">
+              <img src="../../assets/images/missions/milk.svg" alt="" />
+            </div>
             <span>우유</span>
           </div>
           <div class="ingredient-chip ingredient-chip--done">
-            <img src="../../assets/images/missions/sugar.svg" alt="" />
+            <div class="ingredient-chip__circle">
+              <img src="../../assets/images/missions/sugar.svg" alt="" />
+            </div>
             <span>설탕</span>
           </div>
           <div class="ingredient-chip">
-            <img src="../../assets/images/missions/chocolate.svg" alt="" />
+            <div class="ingredient-chip__circle">
+              <img src="../../assets/images/missions/chocolate.svg" alt="" />
+            </div>
             <span>초콜릿</span>
           </div>
         </section>
@@ -70,13 +80,18 @@
               <div class="mission-item__content">
                 <h3>버터</h3>
                 <p>출석체크 하기</p>
-                <div class="mission-item__progress"><span style="width: 100%"></span></div>
+                <div class="mission-item__progress-row">
+                  <div class="mission-item__progress"><span style="width: 100%"></span></div>
+                  <em>1 / 1</em>
+                </div>
               </div>
-              <em>1 / 1</em>
             </div>
             <div class="mission-item__state mission-item__state--done">
-              <small>기본 재료</small>
-              <strong>완료</strong>
+              <span class="mission-item__badge">기본 재료</span>
+              <div class="mission-item__done-label">
+                <img src="../../assets/images/missions/icon-check-done.svg" alt="" width="10" height="8" />
+                <strong>완료</strong>
+              </div>
             </div>
           </li>
 
@@ -88,13 +103,18 @@
               <div class="mission-item__content">
                 <h3>밀가루</h3>
                 <p>웹툰 2개 풀기</p>
-                <div class="mission-item__progress"><span style="width: 100%"></span></div>
+                <div class="mission-item__progress-row">
+                  <div class="mission-item__progress"><span style="width: 100%"></span></div>
+                  <em>1 / 1</em>
+                </div>
               </div>
-              <em>1 / 1</em>
             </div>
             <div class="mission-item__state mission-item__state--done">
-              <small>기본 재료</small>
-              <strong>완료</strong>
+              <span class="mission-item__badge">기본 재료</span>
+              <div class="mission-item__done-label">
+                <img src="../../assets/images/missions/icon-check-done.svg" alt="" width="10" height="8" />
+                <strong>완료</strong>
+              </div>
             </div>
           </li>
 
@@ -104,13 +124,18 @@
               <div class="mission-item__content">
                 <h3>우유</h3>
                 <p>친구 초대하기</p>
-                <div class="mission-item__progress"><span style="width: 100%"></span></div>
+                <div class="mission-item__progress-row">
+                  <div class="mission-item__progress"><span style="width: 100%"></span></div>
+                  <em>1 / 1</em>
+                </div>
               </div>
-              <em>1 / 1</em>
             </div>
             <div class="mission-item__state mission-item__state--done">
-              <small>기본 재료</small>
-              <strong>완료</strong>
+              <span class="mission-item__badge">기본 재료</span>
+              <div class="mission-item__done-label">
+                <img src="../../assets/images/missions/icon-check-done.svg" alt="" width="10" height="8" />
+                <strong>완료</strong>
+              </div>
             </div>
           </li>
 
@@ -120,11 +145,15 @@
               <div class="mission-item__content">
                 <h3>설탕</h3>
                 <p>웹툰 5개 풀기</p>
-                <div class="mission-item__progress"><span style="width: 38%"></span></div>
+                <div class="mission-item__progress-row">
+                  <div class="mission-item__progress"><span style="width: 0%"></span></div>
+                  <em>0 / 1</em>
+                </div>
               </div>
-              <em>1 / 1</em>
             </div>
-            <button class="mission-item__state mission-item__state--link" type="button">바로가기</button>
+            <button class="mission-item__state mission-item__state--link" type="button">
+              <span class="mission-item__badge mission-item__badge--link">바로가기</span>
+            </button>
           </li>
 
           <li class="mission-item">
@@ -133,11 +162,15 @@
               <div class="mission-item__content">
                 <h3>초콜릿</h3>
                 <p>응원 한 마디 작성하기</p>
-                <div class="mission-item__progress"><span style="width: 26%"></span></div>
+                <div class="mission-item__progress-row">
+                  <div class="mission-item__progress"><span style="width: 0%"></span></div>
+                  <em>0 / 1</em>
+                </div>
               </div>
-              <em>1 / 1</em>
             </div>
-            <button class="mission-item__state mission-item__state--link" type="button">바로가기</button>
+            <button class="mission-item__state mission-item__state--link" type="button">
+              <span class="mission-item__badge mission-item__badge--link">바로가기</span>
+            </button>
           </li>
         </ul>
       </div>

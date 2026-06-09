@@ -2,7 +2,7 @@
 <g clip-path="url(#clip0_1_3638)">
 <rect width="372" height="812" fill="#FFD95E"/>
 <rect width="372" height="812" transform="translate(0 76)" fill="#FEFAF4"/>
-<rect x="-103" y="91" width="570" height="761" fill="url(#pattern0_1_3638)" fill-opacity="0.9"/>
+<rect x="-105" y="76" width="570" height="761" fill="url(#pattern0_1_3638)" fill-opacity="0.9"/>
 <path d="M-1 36C-1 24.9543 7.95431 16 19 16H351C362.046 16 371 24.9543 371 36V76H-1V36Z" fill="#FEFAF4"/>
 <circle cx="-3.71101" cy="803.5" r="48.289" fill="#FFD95E"/>
 <circle cx="70.6652" cy="803.5" r="48.289" fill="#FFD95E"/>

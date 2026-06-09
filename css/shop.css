@@ -373,6 +373,7 @@
   font-weight: 500;
   line-height: 14px;
   color: var(--gray);
+  white-space: nowrap;
 }
 
 .shop-invite__btn {
