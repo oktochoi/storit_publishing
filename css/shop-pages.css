@@ -498,13 +498,13 @@
 .shop-tabs {
   display: flex;
   gap: 10px;
-  padding: 0 20px;
   margin-top: 5px;
 }
 
 .shop-tab {
-  flex: 1;
   display: flex;
+  width: 155px;
+  flex: 0 0 155px;
   flex-direction: column;
   align-items: center;
   gap: 9px;
@@ -526,28 +526,30 @@
 }
 
 .shop-tab--active span {
-  color: var(--black);
+  color: var(--Neutral-Black, #1c1000);
 }
 
 .shop-tab__line {
-  width: 149px;
-  height: 2px;
+  width: 152px;
+  height: 3px;
+  flex-shrink: 0;
   object-fit: contain;
 }
 
 .shop-storage-count {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 5px;
   min-height: 18px;
-  margin: 18px 0 0;
+  margin: 45px 0 0;
+  color: var(--Neutral-Black, #1c1000);
+  text-align: left;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 12px;
+  font-style: normal;
   font-weight: 700;
   line-height: 18px;
-}
-
-.shop-panel:has(.shop-voucher-card) .shop-storage-empty {
-  display: none;
 }
 
 .shop-panel:not(:has(.shop-voucher-card)) .shop-voucher-list {
@@ -648,7 +650,7 @@
 
 .shop-storage-empty {
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 12px 20px 20px;
 }
 
 .shop-storage-empty img {
@@ -790,12 +792,13 @@
   height: 26px;
 }
 
-.shop-voucher-detail-table {
+.shop-voucher-detail-table.shop-detail-table {
   margin-top: 20px;
 }
 
 .shop-voucher-detail-table .shop-detail-row {
   padding: 10px 20px;
+  border-radius: 0;
 }
 
 .shop-badge-dday {
