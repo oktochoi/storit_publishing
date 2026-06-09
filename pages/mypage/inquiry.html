@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../css/mypage.css" />
   </head>
   <body>
-    <main class="mypage-app">
+    <main class="mypage-app mypage-app--inquiry">
       <header class="mypage-header">
         <a class="mypage-header__back" href="../../pages/mypage/settings.html" aria-label="뒤로 가기">
           <img src="../../assets/icons/icon-back.svg" alt="" />
@@ -25,22 +25,27 @@
 
       <div class="mypage-body">
         <div class="mypage-scroll">
-        <label class="mypage-form-label" for="inquiry-email">답변 받으실 이메일</label>
-        <input
-          class="mypage-form-input"
-          id="inquiry-email"
-          type="email"
-          value="email@example.com"
-          autocomplete="email"
-        />
+        <div class="mypage-inquiry">
+          <label class="mypage-inquiry__label" for="inquiry-email">답변 받으실 이메일</label>
+          <div class="mypage-inquiry__email-field">
+            <input
+              class="mypage-inquiry__input"
+              id="inquiry-email"
+              type="email"
+              value="email@example.com"
+              autocomplete="email"
+            />
+            <span class="mypage-inquiry__input-line" aria-hidden="true"></span>
+          </div>
 
-        <label class="mypage-form-label" for="inquiry-body">문의 내용</label>
-        <div class="mypage-form-textarea-wrap">
-          <textarea
-            class="mypage-form-textarea"
-            id="inquiry-body"
-            placeholder="내용을 입력하세요"
-          ></textarea>
+          <label class="mypage-inquiry__label" for="inquiry-body">문의 내용</label>
+          <div class="mypage-inquiry__textarea-wrap">
+            <textarea
+              class="mypage-inquiry__textarea"
+              id="inquiry-body"
+              placeholder="내용을 입력하세요"
+            ></textarea>
+          </div>
         </div>
         </div>
 

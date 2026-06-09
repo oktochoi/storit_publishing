@@ -11,11 +11,18 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      href="../../assets/fonts/jalnan-2.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
     <link rel="stylesheet" href="../../css/mypage-common.css" />
     <link rel="stylesheet" href="../../css/mypage.css" />
   </head>
   <body>
-    <main class="mypage-app">
+    <main class="mypage-app mypage-app--withdraw">
       <header class="mypage-header">
         <a class="mypage-header__back" href="../../pages/mypage/settings.html" aria-label="뒤로 가기">
           <img src="../../assets/icons/icon-back.svg" alt="" />
@@ -27,7 +34,10 @@
         <div class="mypage-scroll">
           <section class="mypage-withdraw-hero">
             <div class="mypage-withdraw-hero__inner">
-              <h2>감자 도리님<br />정말로 탈퇴하시겠어요?</h2>
+              <h2 class="mypage-withdraw-hero__title">
+                <span class="mypage-withdraw-hero__name">감자 도리님</span>
+                <span class="mypage-withdraw-hero__question">정말로 탈퇴하시겠어요?</span>
+              </h2>
               <img
                 class="mypage-withdraw-hero__cookie"
                 src="../../assets/images/mypage/withdraw-cookie.svg"
@@ -40,26 +50,21 @@
 
           <section class="mypage-withdraw-notice">
             <div class="mypage-withdraw-notice__head">
-              <img src="../../assets/images/shop/icon-shield.svg" alt="" width="15" height="18" />
+              <img src="../../assets/images/shop/icon-shield.svg" alt="" width="21" height="25" />
               <h3>꼭 확인해주세요!</h3>
             </div>
             <ul class="mypage-withdraw-notice__list">
               <li>
                 <img src="../../assets/images/shop/bullet-check.svg" alt="" width="13" height="13" />
-                탈퇴 시 보유 중인 쿠키와 보상함 상품이 모두 삭제됩니다.
+                지금 탈퇴하시면 지금까지 모은 쿠키와 상품권이 함께 사라져요. 추후에 동일 계정으로 재가입하셔도
+                쿠키와 상품권내역은<br />복구되지 않아요!
               </li>
               <li>
                 <img src="../../assets/images/shop/bullet-check.svg" alt="" width="13" height="13" />
-                작성한 퀴즈 및 활동 기록은 복구할 수 없습니다.
+                탈퇴 후에는 작성하신 퀴즈를 수정 혹은 삭제하실 수 없습니다!<br />탈퇴 신청 전에 꼭 확인해 주세요! 관련한
+                댓글, 퀴즈 기록 모두<br />사라집니다!
               </li>
             </ul>
-            <img
-              class="mypage-withdraw-notice__illus"
-              src="../../assets/images/shop/guide-shield.svg"
-              alt=""
-              width="77"
-              height="67"
-            />
           </section>
 
           <label class="mypage-withdraw-check">
@@ -68,12 +73,14 @@
           </label>
 
           <div class="mypage-withdraw-reason">
-            <label class="mypage-form-label" for="withdraw-reason">떠나시는 이유를 알려주세요!</label>
-            <div class="mypage-withdraw-textarea">
+            <label class="mypage-withdraw-reason__label" for="withdraw-reason">떠나시는 이유를 알려주세요!</label>
+            <div class="mypage-withdraw-reason__textarea-wrap">
               <textarea
-                class="mypage-form-textarea"
+                class="mypage-withdraw-reason__textarea"
                 id="withdraw-reason"
-                placeholder="서비스 탈퇴 사유에 대해 알려주세요. 고객님의 소중한 피드백을 담아 더 나은 서비스로 보답 드리도록 하겠습니다!"
+                placeholder="서비스 탈퇴 사유에 대해 알려주세요.
+고객님의 소중한 피드백을 담아
+더 나은 서비스로 보답 드리도록 하겠습니다!"
               ></textarea>
             </div>
           </div>
@@ -81,7 +88,7 @@
 
         <footer class="mypage-footer">
           <button class="mypage-btn mypage-btn--primary" type="button" id="withdraw-btn" disabled>
-            탈퇴 완료
+            회원 탈퇴
           </button>
         </footer>
 

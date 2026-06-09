@@ -84,10 +84,12 @@
             <img class="ranking-my-card__vline" src="../../assets/images/ranking/divider-v.svg" alt="" />
             <div class="ranking-my-card__goal">
               <p class="ranking-my-card__goal-label">TOP 30 진입까지</p>
-              <p class="ranking-my-card__goal-value">+<em>42</em> 점 필요</p>
-              <p class="ranking-my-card__goal-sub">(822 / 864)</p>
+              <p class="ranking-my-card__goal-value">
+                +<span class="ranking-my-card__goal-num">42</span
+                ><span class="ranking-my-card__goal-text">점 필요</span>
+              </p>
             </div>
-            <a class="ranking-my-card__quiz-btn" href="../../pages/quiz/play.html">퀴즈<br />풀기</a>
+            <a class="ranking-my-card__quiz-btn" href="../../pages/main/index.html">퀴즈<br />풀기</a>
           </section>
 
           <section class="ranking-board" aria-label="순위표">
@@ -96,8 +98,15 @@
               <a class="ranking-tabs__item" href="../../pages/ranking/season.html" role="tab" aria-selected="false">시즌 랭킹</a>
             </div>
 
+            <div class="ranking-table-head" aria-hidden="true">
+              <span class="ranking-table-head__rank">순위</span>
+              <span class="ranking-table-head__name">닉네임</span>
+              <span class="ranking-table-head__score">오늘 점수</span>
+              <span class="ranking-table-head__change">순위변동</span>
+            </div>
+
             <div class="ranking-row ranking-row--gold">
-              <img class="ranking-row__medal" src="../../assets/images/ranking/medal-1st.svg" alt="1위" />
+              <img class="ranking-row__medal" src="../../assets/images/ranking/1.svg" alt="1위" />
               <div class="ranking-row__user">
                 <span class="ranking-avatar"><img src="../../assets/images/ranking/avatar-head.svg" alt="" /></span>
                 <span class="ranking-row__name">무케대마왕</span>
@@ -123,45 +132,49 @@
             </div>
 
             <div class="ranking-row ranking-row--bronze">
-              <img class="ranking-row__medal" src="../../assets/images/ranking/medal-3rd.svg" alt="3위" />
+              <img class="ranking-row__medal" src="../../assets/images/ranking/3.svg" alt="3위" />
               <div class="ranking-row__user">
                 <span class="ranking-avatar"><img src="../../assets/images/ranking/avatar-head.svg" alt="" /></span>
                 <span class="ranking-row__name">격삼추가좀</span>
               </div>
               <span class="ranking-row__score">850점</span>
               <div class="ranking-row__change">
-                <img src="../../assets/images/ranking/trend-same.svg" alt="" />
-                <span>-</span>
+                <span class="ranking-row__change-icon" aria-hidden="true"></span>
+                <img class="ranking-row__change-dash" src="../../assets/images/ranking/change-dash.svg" alt="" />
               </div>
             </div>
 
-            <div class="ranking-gap" aria-hidden="true"><span></span></div>
+            <div class="ranking-gap" aria-hidden="true">
+              <img src="../../assets/images/ranking/gap-ellipsis.svg" alt="" />
+            </div>
 
             <div class="ranking-row ranking-row--me">
-              <span class="ranking-row__rank-num">4</span>
+              <span class="ranking-row__rank-num">7</span>
               <div class="ranking-row__user">
                 <span class="ranking-avatar"><img src="../../assets/images/ranking/avatar-head.svg" alt="" /></span>
                 <span class="ranking-row__name">내가그린기린그림</span>
               </div>
               <span class="ranking-row__score">850점</span>
               <div class="ranking-row__change">
-                <img src="../../assets/images/ranking/trend-same.svg" alt="" />
-                <span>-</span>
+                <span class="ranking-row__change-icon" aria-hidden="true"></span>
+                <img class="ranking-row__change-dash" src="../../assets/images/ranking/change-dash.svg" alt="" />
               </div>
             </div>
 
-            <div class="ranking-gap" aria-hidden="true"><span></span></div>
+            <div class="ranking-gap" aria-hidden="true">
+              <img src="../../assets/images/ranking/gap-ellipsis.svg" alt="" />
+            </div>
 
             <div class="ranking-row">
-              <span class="ranking-row__rank-num">5</span>
+              <span class="ranking-row__rank-num">92</span>
               <div class="ranking-row__user">
                 <span class="ranking-avatar"><img src="../../assets/images/ranking/avatar-head.svg" alt="" /></span>
                 <span class="ranking-row__name">별빛의수호자</span>
               </div>
               <span class="ranking-row__score">850점</span>
               <div class="ranking-row__change">
-                <img src="../../assets/images/ranking/trend-same.svg" alt="" />
-                <span>-</span>
+                <span class="ranking-row__change-icon" aria-hidden="true"></span>
+                <img class="ranking-row__change-dash" src="../../assets/images/ranking/change-dash.svg" alt="" />
               </div>
             </div>
           </section>
@@ -170,11 +183,15 @@
         <aside class="ranking-sticky-lucky" aria-label="오늘의 행운 구간">
           <div class="ranking-lucky">
             <div class="ranking-lucky__inner">
-              <img class="ranking-lucky__illus" src="../../assets/images/ranking/lucky-zone.svg" alt="" />
-              <div class="ranking-lucky__copy">
-                <strong>오늘의 행운 구간</strong>
-                <p class="ranking-lucky__range"><span>10</span>위<span>~30</span>위 사이</p>
-                <p class="ranking-lucky__hint">시간이 지날수록 좁혀져요!</p>
+              <div class="ranking-lucky__head">
+                <img class="ranking-lucky__illus" src="../../assets/images/ranking/lucky-zone.svg" alt="" />
+                <div class="ranking-lucky__copy">
+                  <strong>오늘의 행운 구간</strong>
+                  <p class="ranking-lucky__range">
+                    <span class="ranking-lucky__range-num">10</span><span class="ranking-lucky__range-label">위 ~</span><span class="ranking-lucky__range-num">30</span><span class="ranking-lucky__range-label">위 사이</span>
+                  </p>
+                  <p class="ranking-lucky__hint">시간이 지날수록 좁혀져요!</p>
+                </div>
               </div>
               <div class="ranking-lucky__bar-wrap">
                 <img class="ranking-lucky__pin" src="../../assets/images/ranking/pin.svg" alt="" />
@@ -198,5 +215,6 @@
         </div>
       </div>
     </main>
+    <script src="../../js/ranking.js"></script>
   </body>
 </html>

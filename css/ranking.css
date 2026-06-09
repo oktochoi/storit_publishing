@@ -100,7 +100,9 @@
 }
 
 .ranking-hero__reward-col img.icon--top30 {
+  width: 21px;
   height: 24px;
+  max-width: none;
 }
 
 .ranking-hero__reward-label {
@@ -278,28 +280,22 @@
 
 .ranking-my-card__goal-value {
   margin-top: 2px;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: -0.13px;
   color: var(--dark-brown);
   white-space: nowrap;
 }
 
-.ranking-my-card__goal-value em {
-  font-style: normal;
-  font-size: 13px;
+.ranking-my-card__goal-num {
+  font-size: 18px;
   font-weight: 700;
-  letter-spacing: -0.13px;
+  line-height: 25px;
+  letter-spacing: -0.18px;
 }
 
-.ranking-my-card__goal-sub {
-  margin-top: 6px;
-  font-size: 8px;
+.ranking-my-card__goal-text {
+  font-size: 14px;
   font-weight: 600;
-  line-height: 10px;
-  letter-spacing: -0.08px;
-  color: var(--gray);
+  line-height: 20px;
+  letter-spacing: -0.14px;
 }
 
 .ranking-my-card__quiz-btn {
@@ -389,7 +385,8 @@
 
 .ranking-table-head__change {
   width: 48px;
-  text-align: center;
+  text-align: right;
+  padding-right: 2px;
 }
 
 .ranking-row {
@@ -471,7 +468,14 @@
   gap: 2px;
 }
 
-.ranking-row__change img {
+.ranking-row__change-icon {
+  display: block;
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+.ranking-row__change img:not(.ranking-row__change-dash) {
   width: 11px;
   height: 11px;
 }
@@ -483,8 +487,17 @@
   color: var(--dark-brown);
 }
 
+.ranking-row__change-dash {
+  display: block;
+  width: 13px;
+  height: 2px;
+  flex-shrink: 0;
+  object-fit: contain;
+  align-self: center;
+}
+
 .ranking-gap {
-  height: 20px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -493,30 +506,38 @@
   border-bottom: 0.5px solid var(--sand);
 }
 
-.ranking-gap span {
+.ranking-gap img {
   display: block;
   width: 24px;
-  height: 4px;
-  background-image: radial-gradient(circle, var(--gray) 1.5px, transparent 1.5px);
-  background-size: 8px 4px;
-  background-repeat: repeat-x;
-  background-position: center;
-  opacity: 0.45;
+  height: 24px;
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
-/* 하단 행운 구간 */
+/* 하단 행운 구간 — 좌측 안내 + 우측 진행 바 항상 노출 */
 .ranking-lucky {
-  height: 80px;
-  padding: 11px 22px;
+  display: block;
+  width: 100%;
+  padding: 11px 16px;
   border-radius: 10px;
   background: var(--purple-pale);
 }
 
 .ranking-lucky__inner {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 15px;
-  height: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ranking-lucky__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1;
 }
 
 .ranking-lucky__illus {
@@ -527,8 +548,8 @@
 }
 
 .ranking-lucky__copy {
-  width: 87px;
-  flex-shrink: 0;
+  min-width: 0;
+  flex: 1;
 }
 
 .ranking-lucky__copy strong {
@@ -540,31 +561,36 @@
 }
 
 .ranking-lucky__range {
-  margin-top: 2px;
-  font-size: 12px;
+  margin-top: 4px;
   font-weight: 700;
+}
+
+.ranking-lucky__range-num {
+  font-size: 12px;
   line-height: 18px;
   color: var(--purple-deep);
 }
 
-.ranking-lucky__range span {
-  color: var(--black);
+.ranking-lucky__range-label {
   font-size: 10px;
   line-height: 14px;
+  color: var(--black);
 }
 
 .ranking-lucky__hint {
-  margin-top: 4px;
+  margin-top: 2px;
   font-size: 8px;
   font-weight: 600;
   line-height: 10px;
   letter-spacing: -0.08px;
   color: var(--gray);
+  white-space: nowrap;
 }
 
 .ranking-lucky__bar-wrap {
-  flex: 1;
-  min-width: 0;
+  display: block;
+  width: 137px;
+  flex-shrink: 0;
   position: relative;
   height: 49px;
 }
@@ -635,6 +661,14 @@
   color: var(--purple-deep);
 }
 
+@font-face {
+  font-family: "Jalnan 2";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/Jalnan2OTF00.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* 온보딩 · 발표 (Figma 전체 화면 SVG) */
 .ranking-guide,
 .ranking-announce {
@@ -643,6 +677,27 @@
   position: relative;
   overflow: hidden;
   background: var(--cream);
+}
+
+.ranking-announce__title {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 148px;
+  transform: translateX(-50%);
+  width: 100%;
+  margin: 0;
+  padding: 0 28px;
+  color: var(--brown-mid);
+  text-align: center;
+  font-family: "Jalnan 2", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -0.3px;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
 }
 
 .ranking-announce__winners {
@@ -660,8 +715,10 @@
 }
 
 .ranking-announce__winner {
+  position: relative;
   flex: 1;
   max-width: 110px;
+  padding-top: 44px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -669,14 +726,20 @@
 }
 
 .ranking-announce__winner-medal {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
   width: 43px;
   height: 34px;
   flex-shrink: 0;
   object-fit: contain;
+  pointer-events: none;
 }
 
 .ranking-announce__winner-medal--lucky {
+  top: 22px;
   width: 35px;
   height: 35px;
 }
@@ -903,16 +966,23 @@
 }
 
 .ranking-podium3__item--center {
+  position: relative;
   z-index: 1;
+  padding-top: 26px;
 }
 
 .ranking-podium3__medal {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
   width: 27px;
   height: 22px;
-  margin-bottom: 4px;
   object-fit: contain;
   flex-shrink: 0;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .ranking-podium3__card {
@@ -921,18 +991,33 @@
   border-radius: 10px;
   background: var(--cream);
   border: 0.5px solid var(--sand);
-  padding: 10px 8px;
+  padding: 10px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.ranking-podium3__item--side .ranking-podium3__card {
+  width: 110px;
+  height: 128px;
+  border: 0;
+  background: var(--yellow-pale);
 }
 
 .ranking-podium3__item--center .ranking-podium3__card {
   height: 144px;
   background: var(--yellow);
   border-color: var(--yellow);
+}
+
+.ranking-podium3__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
 }
 
 .ranking-podium3__rank {

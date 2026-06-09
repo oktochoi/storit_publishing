@@ -24,19 +24,33 @@
               <span id="main-nickname">감자도리</span> LV.8
             </p>
             <div class="main-header__progress" aria-hidden="true">
-              <span class="main-header__progress-fill" style="width: 42%"></span>
+              <img
+                class="main-header__progress-track"
+                src="../../assets/images/main/progress-track.svg"
+                alt=""
+              />
+              <div class="main-header__progress-fill" style="width: 42%"></div>
+              <span class="main-header__progress-text">42%</span>
             </div>
-            <span class="main-header__progress-text">42%</span>
           </div>
         </div>
 
         <div class="main-header__center">
           <div class="main-header__hearts" aria-label="하트 2개">
-            <span class="main-header__heart main-header__heart--filled" aria-hidden="true"></span>
-            <span class="main-header__heart" aria-hidden="true"></span>
-            <button class="main-header__heart-add" type="button" aria-label="하트 추가">+</button>
+            <img class="main-header__heart" src="../../assets/images/main/heart-yellow.svg" alt="" />
+            <img class="main-header__heart" src="../../assets/images/main/heart-white.svg" alt="" />
+            <button class="main-header__heart-add" type="button" aria-label="하트 추가">
+              <img src="../../assets/images/main/heart-add.svg" alt="" />
+            </button>
           </div>
-          <p class="main-header__timer">28:45 남음</p>
+          <div class="main-header__timer">
+            <img
+              class="main-header__timer-arrow"
+              src="../../assets/images/main/timer-triangle.svg"
+              alt=""
+            />
+            <span class="main-header__timer-badge">28:45 남음</span>
+          </div>
         </div>
 
         <div class="main-header__actions">
@@ -58,7 +72,10 @@
               src="../../assets/images/main/banner.svg"
               alt="매일 퀴즈 풀고 쿠키 받아가세요"
             />
-            <a class="main-banner__btn" href="#">오늘의 미션 보기 &gt;</a>
+            <a class="main-banner__btn" href="../../pages/mission/index.html">
+              오늘의 미션 보기
+              <img class="main-banner__btn-icon" src="../../assets/images/main/banner-chevron.svg" alt="" />
+            </a>
             <span class="main-banner__badge">1/3</span>
           </div>
         </section>
@@ -289,22 +306,24 @@
 
           <img class="cookie-modal__icon" src="../../assets/icons/angel-cookie.svg" alt="" />
 
-          <h2 class="cookie-modal__title" id="cookie-modal-title">쿠키 충전</h2>
-          <p class="cookie-modal__desc">광고 보시고 추가 쿠키를 얻으시겠습니까?</p>
+          <h2 class="cookie-modal__title" id="cookie-modal-title">하트 기회 충전</h2>
+          <p class="cookie-modal__desc">광고 보시고 추가 하트를 얻으시겠습니까?</p>
 
-          <div class="cookie-modal__meta" aria-label="오늘 남은 광고 충전 횟수">
-            <span class="cookie-modal__play" aria-hidden="true"></span>
-            <span class="cookie-modal__meta-text">오늘 남은 광고 충전 횟수 7 / 10</span>
-          </div>
+          <div class="cookie-modal__footer">
+            <div class="cookie-modal__meta" aria-label="오늘 남은 광고 충전 횟수">
+              <img class="cookie-modal__meta-icon" src="../../assets/icons/ad-charge.svg" alt="" />
+              <span class="cookie-modal__meta-text">오늘 남은 광고 충전 횟수 7 / 10</span>
+            </div>
 
-          <div class="cookie-modal__actions">
-            <button class="cookie-modal__btn cookie-modal__btn--secondary" type="button" data-modal-close>
-              취소
-            </button>
-            <button class="cookie-modal__btn cookie-modal__btn--primary" type="button">
-              <img class="cookie-modal__btn-icon" src="../../assets/icons/tv.svg" alt="" />
-              광고 보기
-            </button>
+            <div class="cookie-modal__actions">
+              <button class="cookie-modal__btn cookie-modal__btn--secondary" type="button" data-modal-close>
+                취소
+              </button>
+              <button class="cookie-modal__btn cookie-modal__btn--primary" type="button">
+                <img class="cookie-modal__btn-icon" src="../../assets/icons/tv.svg" alt="" />
+                광고 보기
+              </button>
+            </div>
           </div>
         </div>
       </div>
